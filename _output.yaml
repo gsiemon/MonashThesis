@@ -1,5 +1,5 @@
 bookdown::pdf_book:
-  template: monashthesis.tex
+  template: uqthesis.tex
   fig_caption: yes
   fig_height: 3.8
   fig_width: 6.3

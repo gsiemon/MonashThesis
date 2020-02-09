@@ -1,14 +1,14 @@
-%% monashthesis Class for LaTeX2e.
+%% uqthesis Class for LaTeX2e.
 %% Version 5.0
 %% By Rob J. Hyndman.
-%% 28 March 2018
+%% Modfied for UQ by Greg Siemon
+%% 9 February 2020
 %%
-%% This class file is for honours and postgraduate research students
-%% in the Department of Econometrics & Business Statistics
-%% at Monash University, Australia.
+%% This class file is for postgraduate research students
+%% at The University of Queensland, Australia.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{monashthesis}[2016/09/06 Monash Thesis Class]
+\ProvidesClass{uqthesis}[2020/02/09 UQ Thesis Class]
 
 %% FONT
 \usepackage[T1]{fontenc}
@@ -183,7 +183,7 @@
 \def\titlepage{{\sf
     \thispagestyle{empty}%
     \null\vskip1cm%
-    \includegraphics[width=15cm]{figures/monash-logo}
+    \includegraphics[width=15cm]{figures/uq-logo}
     \vfill
     \begin{center}
         \Large\textbf{\expandafter{\@title}}\\
@@ -191,7 +191,7 @@
         \@degrees
     \vfill
         A thesis submitted for the degree of \degreetitle { } at\\
-        Monash University in \@submitdate\\
+        The University of Queensland in \@submitdate\\
         Department of Econometrics and Business Statistics
     \end{center}
     %\hrulefill

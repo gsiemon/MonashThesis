@@ -28,7 +28,7 @@ I have / have not renumbered sections of submitted or published papers in order 
 \RaggedRight\textbf{Publication title}  & 
 \RaggedRight\textbf{Status (published, in press, accepted or returned for revision)}  &  
 \RaggedRight\textbf{Nature and \% of student contribution} & 
-\RaggedRight\textbf{Co-author name(s), nature and \% of co-author’s contribution} &  \RaggedRight\textbf{Co-author(s), Monash student Y/N} \\ 
+\RaggedRight\textbf{Co-author name(s), nature and \% of co-author’s contribution} &  \RaggedRight\textbf{Co-author(s), UQ student Y/N} \\ 
 \hline
 2 & xx & xx  & xx & xx & \multicolumn{1}{c|}{N}   \\
 \hline
