@@ -1,113 +1,140 @@
-%% uqthesis Class for LaTeX2e.
-%% Version 5.0
-%% By Rob J. Hyndman.
-%% Modfied for UQ by Greg Siemon
-%% 9 February 2020
-%%
-%% This class file is for postgraduate research students
-%% at The University of Queensland, Australia.
+%*************************************
+% UQ Thesis Formatting Style Class
+%*************************************
+% uqthesis.cls
 
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uqthesis}[2020/02/09 UQ Thesis Class]
+% This file defines the formatting style for your thesis in accordance with the Thesis Format Requirements (See Section 7 of UQ Procedure 4.60.08 Higher Degree by Research Examination)
+% for Masters and PhD theses.
 
-%% FONT
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\RequirePackage{bera}
-\RequirePackage{mathpazo}
+%*************************************
+% Class structure: identification part
+%*************************************
 
-\newif\ifsinglesp@
-\newif\ifdoublesp@
-\newif\ifsingleside@
-\doublesp@true
-\singleside@false
-\DeclareOption{singleside}{\singleside@true}
-\DeclareOption{doubleside}{\singleside@false}
-\DeclareOption{singlespace}{\singlesp@true}
-\DeclareOption{doublespace}{\doublesp@true}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
+\ProvidesClass{uqthesis}[2018/06/26 version 1.01 UQ PhD and Masters thesis style]
+\NeedsTeXFormat{LaTeX2e}[2016/05/16]
 
-\ProcessOptions
+%Load the memoir class.
+\LoadClass[12pt, a4paper]{memoir}
 
-\ifsingleside@%
-  \LoadClass[a4paper,oneside,openany,draft,11pt]{report}
-\else%
-  \LoadClass[a4paper,11pt,openright,twoside]{report}
-\fi%
+%*************************************
+% Load packages
+%*************************************
+\RequirePackage{mathptmx}
+%Set the font to Times New Roman. This package also alters the math-mode font to TNR.
 
-%% Page dimensions
-\ifsingleside@%
-  \usepackage[a4paper,left=3.5cm,right=2.5cm,top=2.5cm,bottom=3.5cm]{geometry}
-\else%
-  \usepackage[a4paper,left=3.5cm,right=2.5cm,top=2.5cm,bottom=3.5cm,twoside]{geometry}
-\fi%
-
-%% CAPTIONS
-\RequirePackage{caption}
-\DeclareCaptionStyle{italic}[justification=centering]
- {labelfont={bf},textfont={it},labelsep=colon}
-\captionsetup[figure]{style=italic,format=hang,singlelinecheck=true}
-\captionsetup[table]{style=italic,format=hang,singlelinecheck=true}
-
-%% HEADERS AND FOOTERS
-\RequirePackage{fancyhdr}
-\pagestyle{fancy}
-\rfoot{\Large\sf\raisebox{-0.1cm}{\textbf{\thepage}}}
-%\lhead{\textsf{\expandafter{\@title}}}
-\lhead{\textsf{\leftmark}}
-\rhead{}
-\cfoot{}
-\setlength{\headheight}{15pt}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
-\fancypagestyle{plain}{%
-\fancyhf{} % clear all header and footer fields
-\fancyfoot[C]{\sf\thepage} % except the center
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}}
-
-%% MATHS
-\RequirePackage{bm,amsmath}
-\allowdisplaybreaks
-
-%% GRAPHICS
 \RequirePackage{graphicx}
-\setcounter{topnumber}{2}
-\setcounter{bottomnumber}{2}
-\setcounter{totalnumber}{4}
-\renewcommand{\topfraction}{0.85}
-\renewcommand{\bottomfraction}{0.85}
-\renewcommand{\textfraction}{0.15}
-\renewcommand{\floatpagefraction}{0.7}
+%Use pdfLaTeX.
 
-\RequirePackage[section]{placeins}
+\RequirePackage{booktabs, longtable}
+%These allow tables to split over pages. Very useful in theses!
 
-%% SECTION TITLES
-\RequirePackage[compact,sf,bf]{titlesec}
-\titleformat{\section}[block]
-  {\fontsize{15}{17}\bfseries\sffamily}
-  {\thesection}
-  {0.4em}{}
-\titleformat{\subsection}[block]
-  {\fontsize{12}{14}\bfseries\sffamily}
-  {\thesubsection}
-  {0.4em}{}
-\titlespacing{\section}{0pt}{*2}{*0.2}
-\titlespacing{\subsubsection}{0pt}{1ex}{0ex}
-\titleformat{\subsubsection}{\bf}{}{0ex}{}
+\RequirePackage{url}
+%Typeset urls properly.
 
+%\RequirePackage{hyperref}
+%Hyperlink your pdf output.
 
-%% SPACING
+\RequirePackage{geometry}
+%This allows us to set the margins correctly.
+
+\RequirePackage{memhfixc}
+	%Need this to make sure the layout is correct.
+
+\RequirePackage{amsmath,amssymb,amsthm}
+%Useful maths packages.
+
 \RequirePackage{setspace}
-\spacing{1.5}
+%Used to set the appropriate linespacing.
 
-%% LINE AND PAGE BREAKING
-\sloppy
-\clubpenalty = 10000
-\widowpenalty = 10000
-\brokenpenalty = 10000
-\RequirePackage{microtype}
-\RequirePackage{ragged2e}
+\RequirePackage{uqtitle}
+%Get the title page right.
+
+\RequirePackage{comment}
+%Use this to enable easy inclusion/exclusion of instructions (at request of grad school).
+
+%*************************************
+% Turn off instructional comments
+%*************************************
+%This section of code allows the template user to turn off the instructional comments with a single option.
+%Adapted from https://tex.stackexchange.com/questions/135248/if-not-declareoption
+	\newif\ifmycomments@comments
+	\DeclareOption{instructions}{\mycomments@commentstrue}
+	\DeclareOption{final}{\mycomments@commentsfalse}
+
+	\ExecuteOptions{draft} % default is to have no comments.
+	\excludecomment{instructional}
+
+	\ProcessOptions\relax
+
+	\ifmycomments@comments
+		\includecomment{instructional} %include comments if true
+	\fi
+
+%*************************************
+% Set page and heading styles
+%*************************************
+% ********* Set page layout **********
+\setlrmarginsandblock{20mm}{20mm}{*}
+\setulmarginsandblock{20mm}{20mm}{*}
+
+\setheadfoot{15mm}{\baselineskip}
+\setheaderspaces{*}{\baselineskip}{*}
+
+\def\baselinestretch{1.1}
+
+%Make sure that TeX sorts out the geometry correctly.
+\checkandfixthelayout
+
+% ********* Chapter and section style **********
+\makechapterstyle{mychapterstyle}{%
+    \renewcommand{\chapnamefont}{\LARGE\rmfamily\bfseries}%
+    \renewcommand{\chapnumfont}{\LARGE\rmfamily\bfseries}%
+    \renewcommand{\chaptitlefont}{\Huge\rmfamily\bfseries}%
+    \renewcommand{\printchaptertitle}[1]{%
+        \chaptitlefont\hrule height 0.5pt \vspace{1em}%
+        {##1}\vspace{1em}\hrule height 0.5pt%
+        }%
+    \renewcommand{\printchapternum}{%
+        \chapnumfont\thechapter%
+        }%
+}
+
+\chapterstyle{mychapterstyle}
+
+\setsecheadstyle{\Large\rmfamily\bfseries}
+\setsubsecheadstyle{\large\rmfamily\bfseries}
+\setsubsubsecheadstyle{\normalfont\rmfamily\bfseries}
+\setparaheadstyle{\normalfont\rmfamily}
+
+\makeevenhead{headings}{\thepage}{}{\small\slshape\leftmark}
+\makeoddhead{headings}{\small\slshape\rightmark}{}{\thepage}
+
+% ********* Table of contents style **********
+\settocdepth{subsection}
+
+\setsecnumdepth{subsection}
+\maxsecnumdepth{subsection}
+\settocdepth{subsection}
+\maxtocdepth{subsection}
+
+\renewcommand{\listfigurename}{List of Figures}
+\renewcommand{\listtablename}{List of Tables}
+
+% ********* General page styles **********
+
+%Get the correct line spacing. Note that \onehalfspacing DOES NOT work because of the way which LaTeX measures linespacing (which is different to Word).
+\linespread{1.3}
+%Make sure footnotes don't split over a page.
+\interfootnotelinepenalty=10000
+
+%*************************************
+% Fix white space to improve readability
+%*************************************
+%Redefine the sqrt command so that it puts a space after the surd.
+%This makes AMSMATH much easier to read.
+%COMMENT THIS OUT OR DELETE IF YOU DON'T WISH TO USE IT.
+\let\SQRT\sqrt
+\renewcommand{\sqrt}[1]{\ensuremath{\SQRT{#1} \;}}
 
 %% BIBLIOGRAPHY
 \usepackage[style=authoryear-comp, backend=biber, natbib=true]{biblatex}
@@ -141,10 +168,6 @@
 
 \DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace}
 
-%% PARAGRAPH BREAKS
-\setlength{\parskip}{1.4ex}
-\setlength{\parindent}{0em}
-
 %% HYPERLINKS
 \RequirePackage{xcolor} % Needed for links
 \definecolor{darkblue}{rgb}{0,0,.6}
@@ -158,81 +181,6 @@
      urlcolor=blue,
      citecolor=darkblue,
      colorlinks=true}
-
-%% Set up line spacing
-\AtBeginDocument{%
-\ifsinglesp@%
-  \singlespacing%
-\else%
-  \doublespacing%
-\fi%
-}
-
-
-%% \author, \title are defined in report; here are the rest of the
-%% front matter defining macros
-\def\degreetitle{Degree not specified}
-\def\submitdate#1{\gdef\@submitdate{#1}}
-\def\degrees#1{\gdef\@degrees{#1}}
-\def\studentid#1{\gdef\@degrees{#1}}
-\def\@title{}\def\@author{}
-\def\authorname{\@author}
-\def\@degrees{}
-\def\@submitdate{\number\the\year}
-
-\def\titlepage{{\sf
-    \thispagestyle{empty}%
-    \null\vskip1cm%
-    \includegraphics[width=15cm]{figures/uq-logo}
-    \vfill
-    \begin{center}
-        \Large\textbf{\expandafter{\@title}}\\
-        \@author\\
-        \@degrees
-    \vfill
-        A thesis submitted for the degree of \degreetitle { } at\\
-        The University of Queensland in \@submitdate\\
-        Department of Econometrics and Business Statistics
-    \end{center}
-    %\hrulefill
-    \newpage\mbox{}\thispagestyle{empty}\newpage}}
-
-\numberwithin{section}{chapter}
-\numberwithin{equation}{chapter}
-
-\setcounter{tocdepth}{1}
-
-\def\prefacesection#1{%
-    \chapter*{#1}
-    \addcontentsline{toc}{chapter}{#1}
-    \markboth{#1}{#1}}
-
-\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-\hbox{}
-\vspace*{\fill}
-\thispagestyle{empty}
-\newpage
-\if@twocolumn\hbox{}\newpage\fi\fi\fi}
-
-\def\tighttoc
-    {
-        \dimen100 = \parskip
-        \setlength{\parskip}{0pt}
-        \tableofcontents
-        \setlength{\parskip}{\dimen100}
-    }
-
-
-% to display the bibliography in table of contents
-\usepackage[nottoc,notlot,notlof]{tocbibind}
-\usepackage{tocloft}
-\renewcommand{\cftchappagefont}{\sffamily\bfseries}
-\renewcommand{\cftchapfont}{\sffamily\bfseries}
-\renewcommand{\cftsecpagefont}{\sffamily}
-\renewcommand{\cftsubsecpagefont}{\sffamily}
-\renewcommand{\cftsecfont}{\sffamily}
-\renewcommand{\cftsubsecfont}{\sffamily}
-\renewcommand{\cfttoctitlefont}{\fontsize{24}{28}\sffamily\bfseries}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Extra stuff for Rmarkdown to work
@@ -282,5 +230,3 @@
 
 \usepackage{longtable,booktabs}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\raggedbottom

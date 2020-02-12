@@ -1,0 +1,38 @@
+% ***************************************************
+% Example of Flow Charts
+% ***************************************************
+%This example is provided for your reference only. DO NOT INCLUDE IN YOUR FINAL THESIS. 
+\chapter{Example of Flow Charts}
+
+\begin{center}
+
+\tikzstyle{decision} = [diamond, draw, fill=white!20, 
+    text width=4.5em, text badly centered, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=white!20, 
+    text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=white!20, node distance=3cm,
+    minimum height=2em]
+    
+\begin{tikzpicture}[node distance = 2cm, auto]
+    % Place nodes
+    \node [block] (Step1) {initialize model};
+    \node [cloud, left of=Step1] (expert) {expert};
+    \node [cloud, right of=Step1] (system) {system};
+    \node [block, below of=Step1] (identify) {identify candidate models};
+    \node [block, below of=identify] (evaluate) {evaluate candidate models};
+    \node [block, left of=evaluate, node distance=3cm] (update) {update model};
+    \node [decision, below of=evaluate] (decide) {is best candidate better?};
+    \node [block, below of=decide, node distance=3cm] (stop) {stop};
+    % Draw edges
+    \path [line] (Step1) -- (identify);
+    \path [line] (identify) -- (evaluate);
+    \path [line] (evaluate) -- (decide);
+    \path [line] (decide) -| node [near start] {yes} (update);
+    \path [line] (update) |- (identify);
+    \path [line] (decide) -- node {no}(stop);
+    \path [line,dashed] (expert) -- (Step1);
+    \path [line,dashed] (system) -- (Step1);
+    \path [line,dashed] (system) |- (evaluate);
+\end{tikzpicture}
+\end{center}

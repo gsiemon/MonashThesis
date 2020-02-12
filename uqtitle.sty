@@ -1,0 +1,75 @@
+%*************************************
+% UQ Thesis Title Page Formatting Package
+%*************************************
+\ProvidesPackage{uqtitle}[2018/03/19 v.01 UQ thesis title template]
+\RequirePackage{graphicx}
+%This package formats the front matter for theses at
+%The University of Queensland.
+%Based on https://en.wikibooks.org/wiki/LaTeX/Title_Creation
+
+%*************************************
+% Define new 'storing' commands and set defaults.
+%*************************************
+%Current degree.
+\newcommand*{\currentdegrees}[1]{\gdef\@currentdegrees{#1}}
+\newcommand*{\@currentdegrees}{Specify your current degrees}
+
+%Degree you are submitting for.
+\newcommand*{\submittedfor}[1]{\gdef\@submittedfor{#1}}
+\newcommand*{\@submittedfor}{Specify degree you are submitting for}
+
+%School you are submitting under.
+\newcommand*{\school}[1]{\gdef\@school{#1}}
+\newcommand*{\@school}{School of Hard Knocks}
+
+%Your ORCID
+\newcommand*{\orcid}[1]{\gdef\@orcid{#1}}
+\newcommand*{\@orcid}{Your orcid}
+
+%Renew the maketitle command.
+\renewcommand*{\maketitle}{%
+
+%*************************************
+% Title Page layout
+%*************************************
+\pagestyle{empty}	
+%Suppress the header.
+\rmfamily					
+%Make sure we have Roman font family.
+
+%Include the university shield.
+%CHANGE TO EPS IF REQUIRED.
+\noindent
+\vfill
+\begin{center}
+	\includegraphics[width=.65\textwidth]{UQLogo}
+\end{center}
+
+\vspace{24 pt}
+
+\begin{center}
+    \Huge\bfseries
+	\thetitle
+\end{center}
+
+\begin{center}
+	\Large
+    \theauthor \\
+		\@currentdegrees{}
+\end{center}
+
+\begin{center}
+    \includegraphics[width=.05\textwidth]{OrcidLogo.jpg} \\
+    \@orcid{}
+\end{center}
+
+\vspace{108 pt}
+
+\begin{center}
+    \Large
+\textit{A thesis submitted for the degree of \@submittedfor{} of Philosophy at\\
+The University of Queensland in \thedate{}}\\
+\Large
+	\@school{}
+\end{center}
+}
