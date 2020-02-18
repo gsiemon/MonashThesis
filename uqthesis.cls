@@ -136,9 +136,14 @@
 \let\SQRT\sqrt
 \renewcommand{\sqrt}[1]{\ensuremath{\SQRT{#1} \;}}
 
-%% BIBLIOGRAPHY
-\usepackage[style=authoryear-comp, backend=biber, natbib=true]{biblatex}
-\ExecuteBibliographyOptions{bibencoding=utf8,minnames=1,maxnames=3, maxbibnames=99,dashed=false,terseinits=true,giveninits=true,uniquename=false,uniquelist=false,doi=false, isbn=false,url=true,sortcites=false}
+% BIBLIOGRAPHY (Ref: Rob Hyndman)
+% Numbered referenceing style that displays the bibliography in citation order.
+\usepackage[style=numeric-comp, backend=biber, natbib=true]{biblatex}
+\ExecuteBibliographyOptions{bibencoding=utf8,minnames=1,maxnames=3, maxbibnames=99,terseinits=true,giveninits=true,uniquename=false,uniquelist=false,doi=false, isbn=false,url=true,sortcites=false, sorting = none}
+
+% Uncomment these if you want to use author year referencing
+%\usepackage[style=apa, backend=biber, natbib=true]{biblatex}
+%\ExecuteBibliographyOptions{bibencoding=utf8,minnames=1,maxnames=3, maxbibnames=99, dashed=false,terseinits=true,giveninits=true,uniquename=false,uniquelist=false,doi=false, isbn=false,url=true,sortcites=false}
 
 \DeclareFieldFormat{url}{\url{#1}}
 \DeclareFieldFormat[article]{pages}{#1}
@@ -165,10 +170,9 @@
 
 \AtEveryBibitem{\clearfield{month}}
 \AtEveryCitekey{\clearfield{month}}
-
 \DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace}
 
-%% HYPERLINKS
+%% HYPERLINKS (Ref: Rob Hyndman)
 \RequirePackage{xcolor} % Needed for links
 \definecolor{darkblue}{rgb}{0,0,.6}
 \RequirePackage{url}
@@ -183,7 +187,7 @@
      colorlinks=true}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Extra stuff for Rmarkdown to work
+% Extra stuff for Rmarkdown to work (Ref: Rob Hyndman)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
