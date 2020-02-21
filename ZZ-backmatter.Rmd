@@ -1,0 +1,28 @@
+ <!-- *************************************************** -->
+ <!--   Back Matter -->
+ <!-- *************************************************** -->
+ <!--   ADD AN ENDQUOTE HERE. If you do not wish to, delete this file. -->
+
+\backmatter
+
+\normalfont
+\cleartooddpage
+
+\pagestyle{empty}
+
+ <!-- ********* Enter your quote within {} brackets below ******** -->
+ <!-- ********* Replace "Author of quote", and "Source of quote" below ******** -->
+\begin{table}[b!]
+\begin{center}
+
+  \textit{Endquote goes here.}
+
+ 
+\end{center}
+\begin{flushright}
+
+  Author of quote, \newline
+  Source of quote
+
+  \end{flushright}
+\end{table}

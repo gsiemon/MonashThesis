@@ -1,7 +1,10 @@
-% ***************************************************
-% Example of Flow Charts
-% ***************************************************
-%This example is provided for your reference only. DO NOT INCLUDE IN YOUR FINAL THESIS. 
+---
+knit: "bookdown::render_book"
+---
+<!-- *************************************************** -->
+<!-- Example of Flow Charts -->
+<!-- *************************************************** -->
+<!-- This example is provided for your reference only. DO NOT INCLUDE IN YOUR FINAL THESIS.  -->
 \chapter{Example of Flow Charts}
 
 \begin{center}

@@ -1,13 +1,25 @@
-% ***************************************************
-% PRELIMINARY PAGES
-% ***************************************************
-% The instructions contained within this part of the thesis template need to be suppressed from the final thesis. There are instructions on how to do this in the Mainthesis.tex file.
+---
+knit: "bookdown::render_book"
+---
 
-% To ensure your work is not suppressed with the instructions please add your text only where instructed.
+<!-- *************************************************** -->
+<!-- PRELIMINARY PAGES -->
+<!-- *************************************************** -->
+<!-- The instructions contained within this part of the thesis template need to be suppressed from the final thesis. There are instructions on how to do this in the Mainthesis.tex file. -->
 
+<!-- To ensure your work is not suppressed with the instructions please add your text only where instructed. -->
 
-%***Publications included in this thesis***
+<!-- We use the Latex \section*{} here rather than RMarkdown ## to ensure that each heading doesn't appear in the Table of Contents -->
+
+<!-- *** Publications included in this thesis *** -->
 \section*{Publications included in this thesis}
+
+ <!-- *************************************************** -->
+ <!-- PRELIMINARY PAGES -->
+ <!-- *************************************************** -->
+ <!-- The instructions contained within this part of the thesis template need to be suppressed from the final thesis. There are instructions on how to do this in the Mainthesis.tex file. -->
+
+ <!-- To ensure your work is not suppressed with the instructions please add your text only where instructed. -->
 
 \begin{instructional}
 
@@ -21,7 +33,7 @@
     
     \noindent
 	On the page immediately preceding the chapter that includes your publication, in no more than one (1) page, describe your contribution to the authorship if you are not a sole author. In describing your contribution, you must satisfy the University's authorship policy (\href{http://ppl.app.uq.edu.au/content/4.20.04-authorship}{\color{blue}{PPL 4.20.04 Authorship}}). Authorship is based on having made a substantive contribution to at least one, and usually more than one, of the following activities:
-	%
+
 	\begin{enumerate}
 		\item	conception and design of the project;
 		\item	analysis and interpretation of the research data on which the publication is based;
@@ -48,13 +60,13 @@
 	
 \end{instructional}
 
-% ********* Enter your text below this line: ********
+ <!-- ********* Enter your text below this line: ******** -->
 
 
-% ***************************************************
+ <!-- *************************************************** -->
 
 
-%***Submitted manuscripts included in this thesis***
+<!-- *** Submitted manuscripts included in this thesis *** -->
 \section*{Submitted manuscripts included in this thesis}
 
 \begin{instructional}
@@ -71,13 +83,13 @@
     \end{enumerate}
 \end{instructional}
 
-% ********* Enter your text below this line: ********
+ <!-- ********* Enter your text below this line: ******** -->
 
 
-% ***************************************************
+ <!-- *************************************************** -->
 
 
-%***Other publications during candidature***
+<!-- *** Other publications during candidature *** -->
 \section*{Other publications during candidature}
 
 \begin{instructional}
@@ -105,13 +117,13 @@
 
 \end{instructional}
 
-% ********* Enter your text below this line: ********
+ <!-- ********* Enter your text below this line: ******** -->
 
 
-% ***************************************************
+ <!-- *************************************************** -->
 
 
-%***Contributions by others to the thesis***
+<!-- *** Contributions by others to the thesis *** -->
 \section*{Contributions by others to the thesis}
 
 \begin{instructional}
@@ -121,13 +133,12 @@
 	If no one contributed significantly then state ``No contributions by others''.
 \end{instructional}
 
-% ********* Enter your text below this line: ********
+ <!-- ********* Enter your text below this line: ******** -->
 
 
-% ***************************************************
+ <!-- *************************************************** -->
 
-
-%***Statement of parts of the thesis submitted to qualify for the award of another degree***
+<!-- *** Statement of parts of the thesis submitted to qualify for the award of another degree *** -->
 \section*{Statement of parts of the thesis submitted to qualify for the award of another degree}
 
 \begin{instructional}
@@ -140,13 +151,12 @@
     If no parts of the thesis have been submitted in this way then state ``No works submitted towards another degree have been included in this thesis''.
 \end{instructional}
 
-% ********* Enter your text below this line: ********
+<!-- ********* Enter your text below this line: ******** -->
 
 
-% ***************************************************
+<!-- *************************************************** -->
 
-
-%***Research involving human or animal subjects***
+<!-- *** Research involving human or animal subjects *** -->
 \section*{Research involving human or animal subjects}
 
 \begin{instructional}
@@ -156,15 +166,15 @@
 	If no human or animal subjects were involved in this research please state: ``No animal or human subjects were involved in this research''.
 \end{instructional}
 
-% ********* Enter your text below this line: ********
+<!-- ********* Enter your text below this line: ******** -->
 
 
-% ***************************************************
+<!-- *************************************************** -->
 
-
-%***Acknowledgements***
 \clearpage
-\section*{Acknowledgments}
+
+<!-- *** Acknowledgements *** -->
+\section*{Acknowledgements}
 
 \begin{instructional}
     Start this section on a new page [the template will handle this for you].\\
@@ -173,15 +183,15 @@
     Acknowledgements recognise those who have been instrumental in the completion of the project.  Acknowledgements should include any professional editorial advice received including the name of the editor and a brief description of the service rendered.
 \end{instructional}
 
-% ********* Enter your text below this line: ********
+<!-- ********* Enter your text below this line: ******** -->
 
 
-% ***************************************************
+<!-- *************************************************** -->
 
-
-%***Financial Support***
 \clearpage
-\section*{Financial support}
+
+<!-- *** Financial Support *** -->
+\section*{Financial Support}
 
 \begin{instructional}
     Start this section on a new page [the template will handle this for you].\\
@@ -199,25 +209,24 @@
     If no financial provided then state ``No financial support was provided to fund this research''.
 \end{instructional}
 
-% ********* Enter your text below this line: ********
+<!-- ********* Enter your text below this line: ******** -->
 
 
-% ***************************************************
+<!-- *************************************************** -->
 
 
-%***Keywords***
+<!-- *** Keywords *** -->
 \section*{Keywords}
 
 \begin{instructional}
 	Maximum 10 words; use lower case throughout, separating words/phrases with commas. For example: word, word word, word, word, word word
 \end{instructional}
-% ********* Enter your text below this line: ********
 
+<!-- ********* Enter your text below this line: ******** -->
 
-% ***************************************************
+<!-- *************************************************** -->
 
-
-%***Australian and New Zealand Standard Research Classifications (ANZSRC)***
+<!-- *** Australian and New Zealand Standard Research Classifications (ANZSRC) *** -->
 \section*{Australian and New Zealand Standard Research Classifications (ANZSRC)}
 
 \begin{instructional}
@@ -235,13 +244,12 @@
     \indent ANZSRC code: 060199, Biochemistry and Cell Biology not elsewhere classified, 20\%
 \end{instructional}
 
-% ********* Enter your text below this line: ********
+<!-- ********* Enter your text below this line: ******** -->
 
 
-% ***************************************************
+<!-- *************************************************** -->
 
-
-%***Fields of Research (FoR) Classification***
+<!-- *** Fields of Research (FoR) Classification *** -->
 \section*{Fields of Research (FoR) Classification}
 
 \begin{instructional}
@@ -256,13 +264,12 @@ FoR code: 0601, Biochemistry and Cell Biology, 80\% \\
 \indent FoR code: 0699, Other Biological Sciences, 20\%
 \end{instructional}
 
-% ********* Enter your text below this line: ********
+<!-- ********* Enter your text below this line: ******** -->
 
 
-% ***************************************************
+<!-- *************************************************** -->
 
-
-%***Order of remaining thesis content***
+<!-- *** Order of remaining thesis content *** -->
 \begin{instructional}
 \section*{Order for the Remainder of the Thesis}
 \noindent
@@ -283,32 +290,40 @@ FoR code: 0601, Biochemistry and Cell Biology, 80\% \\
 \end{instructional}
 \clearpage
 
+<!-- *** Dedication *** -->
+<!-- If you wish to add a dedication (if appropriate), do so here. -->
+<!-- If not, comment out from here... -->
+\rmfamily
+\normalfont
 
-%***Dedication***
-%If you wish to add a dedication (if appropriate), do so here.
-%If not, comment out from here...
-	\rmfamily
-	\normalfont
+\begin{vplace}[1]
+	\begin{center}
+		This template is dedicated to nerds everywhere.
+	\end{center}
+\end{vplace}
 
-	\begin{vplace}[1]
-		\begin{center}
-			This template is dedicated to nerds everywhere.
-		\end{center}
-	\end{vplace}
-
-%... to here.
+<!-- ... to here. -->
 
 \clearpage
 \pagestyle{headings}
 
-
-%***Table of Contents***
-%These generate the table of contents, list of figures, and list of tables from items tagged with a \label{} command.
+<!-- *** Table of Contents *** -->
+<!-- These generate the table of contents, list of figures, and list of tables from items tagged with a \label{} command. -->
 \tableofcontents
 	\clearpage
 \listoffigures
 	\clearpage
 \listoftables
-\input{./PreliminaryAndBackPages/Symbols.tex} %List of symbols. REMOVE IF NOT NEEDED.
 
-%***End of front matter***
+<!-- List of symbols. REMOVE IF NOT NEEDED. -->
+``` {r, abbrviations-symbols, child = "00-symbols.Rmd"}
+```
+<!-- \input{./PreliminaryAndBackPages/Symbols.tex}  -->
+
+
+<!-- ***End of front matter *** -->
+
+<!-- The following line is required to re-set page numbering after preliminary material. Do not remove-->
+\clearpage\pagenumbering{arabic}\setcounter{page}{0}
+
+\mainmatter

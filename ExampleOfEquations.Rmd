@@ -1,0 +1,37 @@
+---
+knit: "bookdown::render_book"
+---
+<!-- *************************************************** -->
+<!-- Example of Equations -->
+<!-- *************************************************** -->
+<!-- This example is provided for your reference only. DO NOT INCLUDE IN YOUR FINAL THESIS.  -->
+<!-- Some good references for using Equations in R Markdown/bookdown: -->
+<!-- https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#equations -->
+<!-- https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#theorems -->
+
+# Example of Equations
+
+You can write simple equations like this, but they won't be numbered:
+$$ E = mc^2 $$
+To get numbered equations we need to use LaTex code.  The "align" environment aligns equations at the oint where the & symbol appears below.
+\begin{align}
+    a &= b + c\\
+    y + z &= x
+\end{align}
+
+
+The "equation" environment defines the beginning and end of an equation.  "nonumber" disables numbering for this equation.
+\begin{equation}
+    \begin{split}
+        a = & b + c\\
+            & + d + e
+    \end{split} 
+\nonumber
+\end{equation}
+ 
+Another example of a simple equation:    
+\begin{equation} 
+    sinx+cosx=1 
+\end{equation} 
+
+

@@ -2,8 +2,35 @@
 knit: "bookdown::render_book"
 ---
 
-# Abstract {-}
+## Abstract {-}
+\normalfont
+<!-- *************************************************** -->
+<!-- Abstract -->
+<!-- *************************************************** -->
+<!-- TO PRODUCE A STAND-ALONE PDF OF YOUR ABSTRACT, uncomment this section and the \end{document} at the end of the file by highlighting all of the commented lines and then pressing Cmd-Shift-C (Mac) or Ctrl-Shift-C (Windows) -->
 
-The abstract should outline the main approach and findings of the thesis and must not be more than 500 words.
+<!-- \documentclass[12pt, a4paper]{memoir} -->
 
-\newpage
+<!-- \usepackage{mathptmx} -->
+<!-- \input{../style.tex} -->
+
+<!-- \begin{document} -->
+
+<!-- \begin{center} -->
+<!-- 	\textbf{\large Your title goes here} -->
+
+<!-- 	\textbf{Abstract} -->
+
+<!-- 	Your Name, The University of Queensland, 20?? -->
+<!-- \end{center} -->
+
+<!--  ********* Enter your text below this line: ******** -->
+Start this section on a new page [this template will automatically handle this]. \\
+
+\noindent
+The abstract should outline the main approach and findings of the thesis and normally must be between 300 and 800 words.
+
+\clearpage
+<!--  *************************************************** -->
+
+<!-- \end{document} -->

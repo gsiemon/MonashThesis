@@ -4,7 +4,10 @@ knit: "bookdown::render_book"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message=FALSE, cache=TRUE)
+knitr::opts_chunk$set(echo = FALSE, 
+                      message = FALSE, 
+                      cache = TRUE)
+
 # Load any R packages you need here
 library(forecast)
 library(ggplot2)

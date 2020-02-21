@@ -1,0 +1,48 @@
+<!-- ************************************* -->
+<!-- List of abbreviations -->
+<!-- ************************************* -->
+<!-- You can make a list of abbreviations here. -->
+
+<!-- You only need to make a label when a symbol is introduced in the document and -->
+<!-- here you can reference this label to obtain page number. -->
+
+<!-- There are LaTeX packages available to take care of these things, but you will -->
+<!-- need to manually add these to the template at this stage (support may be added -->
+<!-- in future releases). --
+<!-- CHOOSE AN APPROPRIATE TITLE. -->
+<!-- \chapter[List of abbreviations]{List of abbreviations} -->
+\chapter[List of Abbreviations and Symbols]{List of Abbreviations and Symbols}
+
+<!-- If the auto-sizing of the tables annoys you, consider the tabularx package. -->
+
+<!-- List of abbreviations. -->
+\begin{center}
+	\small
+	\begin{longtable}{ll}
+	\toprule
+	Abbreviations & {} \\
+	\bottomrule
+	AC				& Alternating Current \\
+	AFM				& Atomic Force Microscopy/Microscope \\
+	\etc{}		&	\etc{} \\
+	\hline
+	\end{longtable}
+\end{center}
+
+<!-- ************************************* -->
+<!--  List of symbols -->
+<!-- ************************************* -->
+<!-- List of symbols. REMOVE IF NOT NEEDED. -->
+\begin{center}
+	\small
+	\begin{longtable}{ll}
+	\toprule
+	Symbols & {} \\
+	\bottomrule
+	$\hat{\rho}$		& Density operator \\
+	\etc{}					& \etc{} \\
+	\hline
+	\end{longtable}
+\end{center}
+
+<!-- *** End of list of symbols and abbreviations *** -->

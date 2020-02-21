@@ -1,0 +1,31 @@
+---
+knit: "bookdown::render_book"
+---
+<!-- *************************************************** -->
+<!-- Example of Tables -->
+<!-- *************************************************** -->
+<!-- This example is provided for your reference only. DO NOT INCLUDE IN YOUR FINAL THESIS.  -->
+\chapter{Example of Tables}
+
+Here is a really simple table.
+
+<!-- "h" means put table here---don't let it float to top or bottom of page -->
+<!-- "ht" means put table here if possible, but if there are problems put it at the top -->
+
+\begin{table}[h]
+\caption{Name of the Australian Cities}
+\begin{center}
+\begin{tabular}{rl}
+\textbf{Number}& \textbf {Name}\\
+      1& Brisbane\\
+      2& Sydney\\
+      3& Melbourne\\
+      4& Canberra\\
+      5& Perth\\
+      6& Adelaide\\
+      7& Hobart\\
+      8& Darwin\\
+\end{tabular}
+\end{center}
+\label{Tag:Australian City}
+\end{table}

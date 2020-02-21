@@ -1,0 +1,19 @@
+---
+knit: "bookdown::render_book"
+---
+
+<!-- *************************************************** -->
+<!-- Example of Figures -->
+<!-- *************************************************** -->
+<!--This example is provided for your reference only. DO NOT INCLUDE IN YOUR FINAL THESIS.  -->
+# Example of Figures
+
+```{r figure-example, fig.cap = "The University of Queensland", out.width= "80%", fig.align="center"}
+
+# The above code chunk called "figure-example", sets the output width of the 
+# image to 80% and sets the figure caption appling it to the output of the 
+# R code below.  The code below inserts the figure into the document.
+
+knitr::include_graphics("figures/FigureUQ.jpg")
+
+```

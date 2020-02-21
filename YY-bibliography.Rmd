@@ -1,0 +1,7 @@
+ <!-- *************************************************** -->
+ <!--   Inserts the Bibliography -->
+ <!-- *************************************************** -->
+
+\cleartooddpage
+
+\printbibliography[heading=bibintoc]

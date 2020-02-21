@@ -6,6 +6,8 @@ knit: "bookdown::render_book"
 
 # Additional stuff
 
+If you need appendix in your thesis then use this file as example (you can add more if you need more) otherwise you should not consider it in your main thesis.
+
 You might put some computer output here, or maybe additional tables.
 
-Note that line 5 must appear before your first appendix. But other appendices can just start like any other chapter.
+Note that line 5 must appear before your **first** appendix. But other appendices can just start like any other chapter.

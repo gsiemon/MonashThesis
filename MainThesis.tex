@@ -40,21 +40,21 @@
 % ***************************************************
 %***THESIS TITLE***
 %Use Sentence Case (capitalise only the first word and proper nouns).
-\title{Enterprise-wide Optimisation in Steelmaking}
+\title{Title here: Subtitle}
 
 %***YOUR NAME***
 %Do not include initials or middle names. Do not include your supervisor(s)' name(s).
-\author{Gregory Siemon}
+\author{Candidate's full name}
 %***YOUR CURRENT DEGREES***
 %Use abbreviations. Do not include the date or location of your degree. Do not include the degree for which this thesis is being submitted.
-\currentdegrees{B.E (Chem) Hons., B.Sc., Grad. Cert. Bus. Admin.}
+\currentdegrees{Candidate’s academic degrees}
 
 %***ORCID ID***
 %Add and hyperlink your ORCID
-\orcid{\href{https://orcid.org/}{0000-0001-6051-4271}}
+\orcid{\href{add your ORCID url here}{Candidate's ORCID}}
 
 %***YEAR OF SUBMISSION***
-\date{2020}
+\date{Year}
 %***TYPE OF DEGREE***
 \submittedfor{Doctor}
 %If this thesis is being submitted for Masters, comment out the above line (add % before line) and remove comment (by removing %) from line below
@@ -63,7 +63,7 @@
 %***YOUR SCHOOL***
 %Use Title Case (capitalise every word which is not a conjunction or preposition).
 %See - http://blog.apastyle.org/apastyle/2012/03/title-case-and-sentence-case-capitalization-in-apa-style.html - for help.
-\school{School of Chemical Engineering}
+\school{Name of the Enrolling Unit}
 
 \begin{document}
 
@@ -75,35 +75,35 @@
 % ***************************************************
 % Preface
 %****************************************************
-\section{Abstract}
-\normalfont
+%\section{Abstract}
+%\normalfont
 %Open abstract.tex to edit
-\input{./Abstract/Abstract.tex}
+%\input{./Abstract/Abstract.tex}
 
-\clearpage
+%\clearpage
 % ***************************************************
-\section*{Declaration by author}
+%\section*{Declaration by author}
 %DO NOT EDIT.
-\input{./Authordeclaration.tex}
+%\input{./Authordeclaration.tex}
 
-\clearpage
+%\clearpage
 %YOU MUST EDIT THIS DOCUMENT.
-\input{./PreliminaryAndBackPages/Preliminary.tex}
+%\input{./PreliminaryAndBackPages/Preliminary.tex}
 
 % ***************************************************
 % Thesis Content
 %****************************************************
-\mainmatter
+%\mainmatter
 
 %Each chapter is a separate .tex file. Use \input to load them here, as demonstrated below for Chapter 1 and Chapter 2.
 %We recommend keeping each in a separate subfolder, with its accompanying figures, etc. This is how the template is currently structured.
 %If you wish to divide your thesis into parts (each containing multiple chapters), us the \part{} command.
 
 %CHAPTER 1
-\input{./Chapter1/Introduction.tex}
+%\input{./Chapter1/Introduction.tex}
 
 %CHAPTER 2
-\input{./Chapter2/Chapter2.tex}
+%\input{./Chapter2/Chapter2.tex}
 
 
 %RMarkdown files are inserted here
@@ -117,9 +117,9 @@ $body$
 % Repeat this process for every chapter.
 
 %CONCLUSION CHAPTER
-\input{./Conclusion/Conclusion.tex}
-\cleartooddpage
+%\input{./Conclusion/Conclusion.tex}
 
+%\cleartooddpage
 % ***************************************************
 % Bibliography
 %****************************************************
@@ -136,7 +136,7 @@ $body$
 %\bibliographystyle{elsarticle-num}
 
 %\bibliography{./References/Bibliography}
-\printbibliography[heading=bibintoc]  %Ref: Rob Hyndman
+%\printbibliography[heading=bibintoc]  %Ref: Rob Hyndman
 
 %When you have finished your thesis we recommend that you manually fix any errors in your bibliography.
 %To do this, compile, copy the .bbl into a new .tex file and include this here after commenting out the other bibliography commands. Make corrections in that .tex file.
@@ -146,15 +146,15 @@ $body$
 %****************************************************
 %UNCOMMENT THIS SECTION IF YOU ARE USING APPENDICES.
 %Simply adapt the same formatting used for other chapters.
-\appendix
+%\appendix
 % If you need appendix in your thesis then consider the following appendix file (you can add more if you need more) otherwise you should not consider it in your main thesis.
-\include{./Appendix/Appendix}
+%\include{./Appendix/Appendix}
 
 % ***************************************************
 % Examples
 %****************************************************
 % The following files are only for examples and you should not include them in your final thesis.
-\include{./Examples/ExampleOfCitations}
+%\include{./Examples/ExampleOfCitations}
 %\include{./Examples/ExampleOfEquations}
 %\include{./Examples/ExampleOfFigures}
 %\include{./Examples/ExampleOfFlowCharts}
@@ -164,6 +164,6 @@ $body$
 % Back Matter
 %****************************************************
 %COMMENT OUT IF YOU DO NOT WISH TO INCLUDE BACK MATTER.
-\input{./PreliminaryAndBackPages/Back.tex}
+%\input{./PreliminaryAndBackPages/Back.tex}
 
 \end{document}

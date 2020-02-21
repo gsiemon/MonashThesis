@@ -1,0 +1,10 @@
+---
+knit: "bookdown::render_book"
+---
+<!-- *************************************************** -->
+<!-- Example of Citations -->
+<!-- *************************************************** -->
+<!-- This example is provided for your reference only. DO NOT INCLUDE IN YOUR FINAL THESIS.  -->
+\chapter{Example of Citations}
+
+This text is only for Bibliography testing purposes. This is a book by Cawvey et al. [@Cawvey2017]. There are few journal articles [@Pakzad2018; @Adachi2007] in this bibliography. This is a proceeding paper [@J.Fenwick2010].  This is a PhD thesis by Peerling [@PeerlingPhD1999]. These are few other types of citations [@Panis2004].

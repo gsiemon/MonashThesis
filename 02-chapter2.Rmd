@@ -1,0 +1,77 @@
+---
+chapter: 2
+knit: "bookdown::render_book"
+---
+
+<!-- *************************************************** -->
+<!--  How to introduce a previously published chapter -->
+<!-- *************************************************** -->
+<!-- This is an example of how you might introduce a chapter that has been published previously.  -->
+\cleartoevenpage
+\pagestyle{empty}
+<!-- Use this command (above) to suppress the header from the preceding chapter. -->
+
+\noindent
+The following publication has been incorporated as Chapter \ref{Chap:label}.
+
+\noindent
+1.\cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, \href{linktoyourpaper}{Title of your paper}, \textit{Journal} Issue, Number, Year
+
+\begin{table}[h]
+	\begin{center}
+	\begin{tabular}{|c|l|l|}
+		\hline
+		Contributor & Statement of contribution & \% \\
+		\hline
+		\textbf{Your Name}				& writing of text 					& 70\\
+															& proof-reading							& 60 \\
+															& theoretical derivations 	& 70\\
+															& numerical calculations 		& 100\\
+															& preparation of figures 		& 80 \\
+															& initial concept						& 10 \\
+		\hline
+		Co-author 1								& writing of text 					& 20\\
+															& proof-reading							& 10 \\
+															& supervision, guidance 		& 20\\
+															& theoretical derivations 	& 10\\
+															& preparation of figures 		& 20 \\
+															& initial concept						& 10 \\
+		\hline
+		Final Author							& writing of text 					& 10\\
+															& proof-reading							& 30 \\
+															& supervision, guidance 		& 80 \\
+															& theoretical derivations 	& 20 \\
+															& preparation of figures 		& 10 \\
+															& initial concept						& 80 \\
+		\hline
+	\end{tabular}
+	\end{center}
+\end{table}
+
+If your task breakdown requires further clarification, do so here. Do not exceed a single page.
+
+
+<!-- *************************************************** -->
+<!-- Example of an internal chapter -->
+<!-- *************************************************** -->
+<!-- This is an internal chapter of the thesis. -->
+<!-- If you have a long title, you can supply an abbreviated version to print in the Table of Contents using the optional argument to the \chapter command. -->
+\chapter[Abbreviated title]{Full title}
+\label{Chap:label}    <!-- Create your own label -->
+\pagestyle{headings}
+
+<!-- If you are presenting work which has been previously published, acknowledge this here. -->
+
+<!-- ********* Enter your text below this line: ******** -->
+Introduce the broad layout of the chapter.
+
+<!-- *************************************************** -->
+
+
+\section{Introduction}
+\label{Sec:label}   <!-- Create your own label -->
+
+<!-- ********* Enter your text below this line: ******** -->
+Add your text here. 
+
+<!-- *************************************************** -->
