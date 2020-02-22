@@ -43,8 +43,9 @@ To compile the thesis into a .pdf file, open index.Rmd in RStudio and click the 
 ## Useful R Markdown references
 
 The following references are a useful starting point for learning R Markdown:
-![R Markdown by RStudio](https://rmarkdown.rstudio.com/lesson-1.html)
-![bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/)
-![R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
-![R Markdown Cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
-![R Markdown Quick Reference](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+* R Markdown by RStudio: https://rmarkdown.rstudio.com/lesson-1.html
+* bookdown: Authoring Books and Technical Documents with R Markdown: https://bookdown.org/yihui/bookdown/
+* R Markdown: The Definitive Guide: https://bookdown.org/yihui/rmarkdown/
+* R Markdown Cheatsheet: https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf
+* R Markdown Quick Reference: https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf
