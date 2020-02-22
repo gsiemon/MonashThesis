@@ -49,27 +49,6 @@
 \RequirePackage{uqtitle}
 %Get the title page right.
 
-\RequirePackage{comment}
-%Use this to enable easy inclusion/exclusion of instructions (at request of grad school).
-
-%*************************************
-% Turn off instructional comments (Not required for RMarkdown.  Use Knitr params instead)
-%*************************************
-%This section of code allows the template user to turn off the instructional comments with a single option.
-%Adapted from https://tex.stackexchange.com/questions/135248/if-not-declareoption
-%	\newif\ifmycomments@comments
-%	\DeclareOption{instructions}{\mycomments@commentstrue}
-%	\DeclareOption{final}{\mycomments@commentsfalse}
-%
-%	\ExecuteOptions{draft} % default is to have no comments.
-%	\excludecomment{instructional}
-%
-%	\ProcessOptions\relax
-%
-%	\ifmycomments@comments
-%		\includecomment{instructional} %include comments if true
-%	\fi
-
 %*************************************
 % Set page and heading styles
 %*************************************
@@ -136,8 +115,11 @@
 \let\SQRT\sqrt
 \renewcommand{\sqrt}[1]{\ensuremath{\SQRT{#1} \;}}
 
-% BIBLIOGRAPHY (Ref: Rob Hyndman)
-% Numbered referenceing style that displays the bibliography in citation order.
+%****************************************
+% Bibliography Package (Ref: Rob Hyndman)
+% Default: Numbered references in citation order
+%****************************************
+% Numbered referencing style that displays the bibliography in citation order.
 \usepackage[style=numeric-comp, backend=biber, natbib=true]{biblatex}
 \ExecuteBibliographyOptions{bibencoding=utf8, minnames=1, maxnames=3, maxbibnames=99, terseinits=true, giveninits=true, uniquename=false, uniquelist=false, doi=false, isbn=false, url=true, sortcites=false, sorting = none}
 

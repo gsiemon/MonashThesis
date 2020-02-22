@@ -331,7 +331,7 @@ Remainder of the thesis should be in the following order
 \listoftables
 
 <!-- List of symbols. Included if params: symbols is set to TRUE in Index.RMD -->
-``` {r, abbrviations-symbols, child = "00-symbols.Rmd", include = params$symbols}
+``` {r, abbreviations-symbols, child = if (params$symbols) "00-symbols.Rmd"}
 ```
 
 <!-- ***End of front matter *** -->

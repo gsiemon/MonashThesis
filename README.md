@@ -36,6 +36,8 @@ Replace references/bibliography.bib with your reference file in Bibtex format.
 
 Several examples are included in the examples directory.
 
+By default, citations are numbered and are included in the bibliography in citation order. Edit lines 118-129 in uqthesis.cls to change to an APA style, author-date format.
+
 To compile the thesis into a .pdf file, open index.Rmd in RStudio and click the Knit button.
 
 ## Useful R Markdown references
