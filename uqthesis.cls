@@ -53,22 +53,22 @@
 %Use this to enable easy inclusion/exclusion of instructions (at request of grad school).
 
 %*************************************
-% Turn off instructional comments
+% Turn off instructional comments (Not required for RMarkdown.  Use Knitr params instead)
 %*************************************
 %This section of code allows the template user to turn off the instructional comments with a single option.
 %Adapted from https://tex.stackexchange.com/questions/135248/if-not-declareoption
-	\newif\ifmycomments@comments
-	\DeclareOption{instructions}{\mycomments@commentstrue}
-	\DeclareOption{final}{\mycomments@commentsfalse}
-
-	\ExecuteOptions{draft} % default is to have no comments.
-	\excludecomment{instructional}
-
-	\ProcessOptions\relax
-
-	\ifmycomments@comments
-		\includecomment{instructional} %include comments if true
-	\fi
+%	\newif\ifmycomments@comments
+%	\DeclareOption{instructions}{\mycomments@commentstrue}
+%	\DeclareOption{final}{\mycomments@commentsfalse}
+%
+%	\ExecuteOptions{draft} % default is to have no comments.
+%	\excludecomment{instructional}
+%
+%	\ProcessOptions\relax
+%
+%	\ifmycomments@comments
+%		\includecomment{instructional} %include comments if true
+%	\fi
 
 %*************************************
 % Set page and heading styles

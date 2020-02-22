@@ -24,11 +24,15 @@ knit: "bookdown::render_book"
 <!-- 	Your Name, The University of Queensland, 20?? -->
 <!-- \end{center} -->
 
-<!--  ********* Enter your text below this line: ******** -->
-Start this section on a new page [this template will automatically handle this]. \\
+```{block prelim-abstract, include = params$instructions}
+Start this section on a new page [this template will automatically handle this]. \newline
 
 \noindent
 The abstract should outline the main approach and findings of the thesis and normally must be between 300 and 800 words.
+```
+
+<!--  ********* Enter your text below this line: ******** -->
+\noindent
 
 \clearpage
 <!--  *************************************************** -->

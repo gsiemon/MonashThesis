@@ -20,45 +20,43 @@ knit: "bookdown::render_book"
  <!-- The instructions contained within this part of the thesis template need to be suppressed from the final thesis. There are instructions on how to do this in the Mainthesis.tex file. -->
 
  <!-- To ensure your work is not suppressed with the instructions please add your text only where instructed. -->
+```{block prelim-publications, include = params$instructions}
 
-\begin{instructional}
-
-	Start this section on a new page [this template will automatically handle this].\\
+Start this section on a new page [this template will automatically handle this]. \newline
 	
-	\noindent
-	If you choose to include publications as part of your thesis as described in UQ policy (\href{http://ppl.app.uq.edu.au/content/4.60.07-alternate-thesis-format-options}{\color{blue}{PPL 4.60.07 Alternative Thesis Format Options}}) use this section to detail accepted or in press publication/s using the standard citation format for your discipline. \\
+\noindent
+If you choose to include publications as part of your thesis as described in UQ policy (\href{http://ppl.app.uq.edu.au/content/4.60.07-alternate-thesis-format-options}{\color{blue}{PPL 4.60.07 Alternative Thesis Format Options}}) use this section to detail accepted or in press publication/s using the standard citation format for your discipline. \newline
     
-    \noindent
-	Papers submitted for publication and awaiting review should appear in the next section, \textbf{Submitted manuscripts included in this thesis}.\\
+\noindent
+Papers submitted for publication and awaiting review should appear in the next section, \textbf{Submitted manuscripts included in this thesis}. \newline
     
-    \noindent
-	On the page immediately preceding the chapter that includes your publication, in no more than one (1) page, describe your contribution to the authorship if you are not a sole author. In describing your contribution, you must satisfy the University's authorship policy (\href{http://ppl.app.uq.edu.au/content/4.20.04-authorship}{\color{blue}{PPL 4.20.04 Authorship}}). Authorship is based on having made a substantive contribution to at least one, and usually more than one, of the following activities:
+\noindent
+On the page immediately preceding the chapter that includes your publication, in no more than one (1) page, describe your contribution to the authorship if you are not a sole author. In describing your contribution, you must satisfy the University's authorship policy (\href{http://ppl.app.uq.edu.au/content/4.20.04-authorship}{\color{blue}{PPL 4.20.04 Authorship}}). Authorship is based on having made a substantive contribution to at least one, and usually more than one, of the following activities:
 
-	\begin{enumerate}
-		\item	conception and design of the project;
-		\item	analysis and interpretation of the research data on which the publication is based;
-		\item	drafting significant parts of the publication or critically reviewing it so as to contribute to the interpretation.
-	\end{enumerate}
+\begin{enumerate}
+	\item	conception and design of the project;
+	\item	analysis and interpretation of the research data on which the publication is based;
+	\item	drafting significant parts of the publication or critically reviewing it so as to contribute to the interpretation.
+\end{enumerate}
 	
-	\noindent
-	As an author, you must have participated sufficiently in the publication to take public responsibility for at least that part of the work that you contributed.\\
+\noindent
+As an author, you must have participated sufficiently in the publication to take public responsibility for at least that part of the work that you contributed. \newline
     
-    \noindent
-	It may be useful to refer to specific parts of the methods, analyses, results, or discussion to illustrate your contribution to the paper.\\
+\noindent
+It may be useful to refer to specific parts of the methods, analyses, results, or discussion to illustrate your contribution to the paper. \newline
     
-    \noindent
-	If you have not included any of your publications in the thesis then state ``No publications included''.\\
+\noindent
+If you have not included any of your publications in the thesis then state ``No publications included''. \newline
 	
-	\textbf{Example:}
-	\begin{enumerate}
+\textbf{Example:}
+\begin{enumerate}
 
-    \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, \href{linktoyourpaper}{Title of your paper}, \textit{Journal}, Issue, Number, Year
+  \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, \href{linktoyourpaper}{Title of your paper}, \textit{Journal}, Issue, Number, Year
 
-    \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, \href{linktoyourpaper}{Title of your paper}, \textit{Journal}, Issue, Number, Year
+  \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, \href{linktoyourpaper}{Title of your paper}, \textit{Journal}, Issue, Number, Year
 
-    \end{enumerate}
-	
-\end{instructional}
+\end{enumerate}
+```
 
  <!-- ********* Enter your text below this line: ******** -->
 
@@ -69,20 +67,20 @@ knit: "bookdown::render_book"
 <!-- *** Submitted manuscripts included in this thesis *** -->
 \section*{Submitted manuscripts included in this thesis}
 
-\begin{instructional}
-	List manuscript/s submitted for publication here. As described above for \textbf{Publications included in the thesis}, on the page immediately preceding the chapter that includes the submitted manuscript, in no more than one (1) page, detail your contribution to the authorship if you are not the sole author.\\
+```{block prelim-manuscripts, include = params$instructions}
+
+List manuscript/s submitted for publication here. As described above for \textbf{Publications included in the thesis}, on the page immediately preceding the chapter that includes the submitted manuscript, in no more than one (1) page, detail your contribution to the authorship if you are not the sole author. \newline
     
-    \noindent
-    If you have no submitted manuscripts from your candidature then state ``No manuscripts submitted for publication''.\\
+\noindent
+If you have no submitted manuscripts from your candidature then state ``No manuscripts submitted for publication''. \newline
     
-    \textbf{Example:}
-    \begin{enumerate}
-
-    \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, Title of your paper, submitted to \textit{Journal} on 4th June 2018.
-
-    \end{enumerate}
-\end{instructional}
-
+\textbf{Example:}
+\begin{enumerate}
+  
+\item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, Title of your paper, submitted to \textit{Journal} on 4th June2018.
+  
+\end{enumerate}
+```
  <!-- ********* Enter your text below this line: ******** -->
 
 
@@ -92,30 +90,30 @@ knit: "bookdown::render_book"
 <!-- *** Other publications during candidature *** -->
 \section*{Other publications during candidature}
 
-\begin{instructional}
-    List other publications arising during your candidature using the standard citation format for your discipline. Divide your publications into sub-sections as appropriate in your discipline \eg{} peer-reviewed papers, book chapters, conference abstracts. Papers submitted for publication and awaiting review are not considered publications and cannot be included in this section.\\
+```{block prelim-otherpubs, include = params$instructions}
+
+List other publications arising during your candidature using the standard citation format for your discipline. Divide your publications into sub-sections as appropriate in your discipline \eg{} peer-reviewed papers, book chapters, conference abstracts. Papers submitted for publication and awaiting review are not considered publications and cannot be included in this section.\newline
     
-    \noindent
-    If you have no publications from your candidature then state ``No other publications''.\\
+\noindent
+If you have no publications from your candidature then state ``No other publications''.\newline
     
-    \textbf{Example:}
-    \subsection*{Conference abstracts}
+\textbf{Example:}
+\subsection*{Conference abstracts}
 
-    \begin{enumerate}
+\begin{enumerate}
 
-    \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, Title of your conference paper, \textit{Proceedings of Conference}, other details.
+  \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, Title of your conference paper, \textit{Proceedings of Conference}, other details.
 
-    \end{enumerate}
+\end{enumerate}
 
-    \subsection*{Book chapters}
+\subsection*{Book chapters}
 
-    \begin{enumerate}
+\begin{enumerate}
 
-    \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, Title of your chapter, Book, editor, \etc{}.
+  \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, Title of your chapter, Book, editor, \etc{}.
 
-    \end{enumerate}
-
-\end{instructional}
+\end{enumerate}
+```
 
  <!-- ********* Enter your text below this line: ******** -->
 
@@ -126,12 +124,13 @@ knit: "bookdown::render_book"
 <!-- *** Contributions by others to the thesis *** -->
 \section*{Contributions by others to the thesis}
 
-\begin{instructional}
-	List the significant and substantial inputs made by others to the research, work and writing represented and/or reported in the thesis. These could include significant contributions to: the conception and design of the project; non-routine technical work; analysis and interpretation of research data; drafting significant parts of the work or critically revising it so as to contribute to the interpretation. \\
+```{block prelim-othercontrib, include = params$instructions}
+
+List the significant and substantial inputs made by others to the research, work and writing represented and/or reported in the thesis. These could include significant contributions to: the conception and design of the project; non-routine technical work; analysis and interpretation of research data; drafting significant parts of the work or critically revising it so as to contribute to the interpretation. \newline
     
-    \noindent
-	If no one contributed significantly then state ``No contributions by others''.
-\end{instructional}
+\noindent
+If no one contributed significantly then state ``No contributions by others''.
+```
 
  <!-- ********* Enter your text below this line: ******** -->
 
@@ -141,15 +140,16 @@ knit: "bookdown::render_book"
 <!-- *** Statement of parts of the thesis submitted to qualify for the award of another degree *** -->
 \section*{Statement of parts of the thesis submitted to qualify for the award of another degree}
 
-\begin{instructional}
-    The thesis must be comprised only of research undertaken while enrolled in the HDR program unless otherwise approved by the Dean, Graduate School in advance of submission.\\
+```{block prelim-otheraward, include = params$instructions}
+
+The thesis must be comprised only of research undertaken while enrolled in the HDR program unless otherwise approved by the Dean, Graduate School in advance of submission.\newline
     
-    \noindent
-    If you have been given permission to include your previous work that has been used towards another degree, you must list the relevant parts of the thesis that incorporates this work including, the degree name, year and institution, and the outcome of the submission of material. \\
+\noindent
+If you have been given permission to include your previous work that has been used towards another degree, you must list the relevant parts of the thesis that incorporates this work including, the degree name, year and institution, and the outcome of the submission of material. \newline
     
-    \noindent
-    If no parts of the thesis have been submitted in this way then state ``No works submitted towards another degree have been included in this thesis''.
-\end{instructional}
+\noindent
+If no parts of the thesis have been submitted in this way then state ``No works submitted towards another degree have been included in this thesis''.
+```
 
 <!-- ********* Enter your text below this line: ******** -->
 
@@ -159,12 +159,13 @@ knit: "bookdown::render_book"
 <!-- *** Research involving human or animal subjects *** -->
 \section*{Research involving human or animal subjects}
 
-\begin{instructional}
-	All research involving human or animal subjects requires prior ethical review and approval by an independent review committee. At UQ, the relevant committee for research involving human subjects is the \href{http://www.uq.edu.au/research/integrity-compliance/human-ethics}{\color{blue}{Human Ethics Unit}} and the relevant committee for research involving animal subjects is the relevant \href{http://www.uq.edu.au/research/integrity-compliance/animal-welfare}{\color{blue}{Animal Ethics Committee}}.  Please provide details of any ethics approvals obtained including the ethics approval number and name of approving committees.  A copy of the ethics approval letter must be included in the thesis appendix.\\
+```{block prelim-humananimals, include = params$instructions}
+
+All research involving human or animal subjects requires prior ethical review and approval by an independent review committee. At UQ, the relevant committee for research involving human subjects is the \href{http://www.uq.edu.au/research/integrity-compliance/human-ethics}{\color{blue}{Human Ethics Unit}} and the relevant committee for research involving animal subjects is the relevant \href{http://www.uq.edu.au/research/integrity-compliance/animal-welfare}{\color{blue}{Animal Ethics Committee}}.  Please provide details of any ethics approvals obtained including the ethics approval number and name of approving committees.  A copy of the ethics approval letter must be included in the thesis appendix.\newline
     
-    \noindent
-	If no human or animal subjects were involved in this research please state: ``No animal or human subjects were involved in this research''.
-\end{instructional}
+\noindent
+If no human or animal subjects were involved in this research please state: ``No animal or human subjects were involved in this research''.
+```
 
 <!-- ********* Enter your text below this line: ******** -->
 
@@ -176,12 +177,13 @@ knit: "bookdown::render_book"
 <!-- *** Acknowledgements *** -->
 \section*{Acknowledgements}
 
-\begin{instructional}
-    Start this section on a new page [the template will handle this for you].\\
+```{block prelim-acknowledgements, include = params$instructions}
+
+Start this section on a new page [the template will handle this for you].\newline
     
-    \noindent
-    Acknowledgements recognise those who have been instrumental in the completion of the project.  Acknowledgements should include any professional editorial advice received including the name of the editor and a brief description of the service rendered.
-\end{instructional}
+\noindent
+Acknowledgements recognise those who have been instrumental in the completion of the project.  Acknowledgements should include any professional editorial advice received including the name of the editor and a brief description of the service rendered.
+```
 
 <!-- ********* Enter your text below this line: ******** -->
 
@@ -193,21 +195,21 @@ knit: "bookdown::render_book"
 <!-- *** Financial Support *** -->
 \section*{Financial Support}
 
-\begin{instructional}
-    Start this section on a new page [the template will handle this for you].\\
+```{block prelim-financial, include = params$instructions}
+Start this section on a new page [the template will handle this for you].\newline
     
-    \noindent
-    If you are the recipient of an Australian Government Research Training Program (RTP) scholarship, you are required to acknowledge this contribution.  Please include the text below:\\
-    
-    \noindent
-    ``This research was supported by an Australian Government Research Training Program Scholarship''\\
-    
-    \noindent
-    If you received any other financial support for your project, you are also required to acknowledge the funding body/bodies in this section.\\
-    
-    \noindent
-    If no financial provided then state ``No financial support was provided to fund this research''.
-\end{instructional}
+\noindent
+If you are the recipient of an Australian Government Research Training Program (RTP) scholarship, you are required to acknowledge thicontribution.  Please include the text below:\newline
+
+\noindent
+``This research was supported by an Australian Government Research Training Program Scholarship''\newline
+
+\noindent
+If you received any other financial support for your project, you are also required to acknowledge the funding body/bodies in thisection.\newline
+
+\noindent
+If no financial provided then state ``No financial support was provided to fund this research''.
+```
 
 <!-- ********* Enter your text below this line: ******** -->
 
@@ -218,31 +220,34 @@ knit: "bookdown::render_book"
 <!-- *** Keywords *** -->
 \section*{Keywords}
 
-\begin{instructional}
+```{block prelim-keywords, include = params$instructions}
+
 	Maximum 10 words; use lower case throughout, separating words/phrases with commas. For example: word, word word, word, word, word word
-\end{instructional}
+```
 
 <!-- ********* Enter your text below this line: ******** -->
+
 
 <!-- *************************************************** -->
 
 <!-- *** Australian and New Zealand Standard Research Classifications (ANZSRC) *** -->
 \section*{Australian and New Zealand Standard Research Classifications (ANZSRC)}
 
-\begin{instructional}
-    Provide data that links your thesis to the disciplines and discipline clusters in the Federal Government’s Excellence in Research for Australia (ERA) initiative.\\
+```{block prelim-ANZSRC, include = params$instructions}
+
+Provide data that links your thesis to the disciplines and discipline clusters in the Federal Government’s Excellence in Research for Australia (ERA) initiative.\newline
     
-    \noindent
-    Please allocate the thesis a \textbf{maximum of 3} \href{http://www.abs.gov.au/Ausstats/abs@.nsf/Latestproducts/6BB427AB9696C225CA2574180004463E?opendocument}{\color{blue}{Australian and New Zealand Standard Research Classifications (ANZSRC) codes}} at the \textbf{6 digit level} and include the descriptor and a percent weighting for each code. Total percent must add to 100.\\
+\noindent
+Please allocate the thesis a \textbf{maximum of 3} \href{http://www.abs.gov.au/Ausstats/abs@.nsf/Latestproducts/6BB427AB9696C225CA2574180004463E?opendocument}{\color{blue}{Australian and New Zealand Standard Research Classifications (ANZSRC) codes}} at the \textbf{6 digit level} and include the descriptor and a percent weighting for each code. Total percent must add to 100.\newline
 
 
-\textbf{Example:}\\
+\textbf{Example:}\newline
 
 
-    ANZSRC code: 060101, Analytical Biochemistry, 60\% \\
-    \indent ANZSRC code: 060104, Cell Metabolism, 20\% \\
-    \indent ANZSRC code: 060199, Biochemistry and Cell Biology not elsewhere classified, 20\%
-\end{instructional}
+ANZSRC code: 060101, Analytical Biochemistry, 60\% \newline
+\indent ANZSRC code: 060104, Cell Metabolism, 20\% \newline
+\indent ANZSRC code: 060199, Biochemistry and Cell Biology not elsewhere classified, 20\%
+```
 
 <!-- ********* Enter your text below this line: ******** -->
 
@@ -252,17 +257,18 @@ knit: "bookdown::render_book"
 <!-- *** Fields of Research (FoR) Classification *** -->
 \section*{Fields of Research (FoR) Classification}
 
-\begin{instructional}
-    Allows for categorisation of the thesis according to the field of research. \\
-    
-    \noindent
-    Please allocate the thesis a \textbf{maximum of 3} \href{http://www.abs.gov.au/Ausstats/abs@.nsf/Latestproducts/6BB427AB9696C225CA2574180004463E?opendocument}{\color{blue}{Fields of Research (FoR) Codes}} at the \textbf{4 digit level} and include the descriptor and a percent weighting for each code. Total percent must add to 100. \\
+```{block prelim-FoR, include = params$instructions}
 
-\textbf{Example:}\\
+Allows for categorisation of the thesis according to the field of research. \newline
 
-FoR code: 0601, Biochemistry and Cell Biology, 80\% \\
+\noindent
+Please allocate the thesis a \textbf{maximum of 3\href{http://www.abs.gov.au/Ausstats/abs@.nsf/Latestproducts/6BB427AB9696C225CA2574180004463E?opendocument}{\color{blue}{Fields of Researc(FoR) Codes}} at the \textbf{4 digit level} and include the descriptor and a percent weighting for each code. Total percent must add to 100\newline
+
+\textbf{Example:}\newline
+
+FoR code: 0601, Biochemistry and Cell Biology, 80\% \newline
 \indent FoR code: 0699, Other Biological Sciences, 20\%
-\end{instructional}
+```
 
 <!-- ********* Enter your text below this line: ******** -->
 
@@ -270,24 +276,26 @@ FoR code: 0601, Biochemistry and Cell Biology, 80\% \\
 <!-- *************************************************** -->
 
 <!-- *** Order of remaining thesis content *** -->
-\begin{instructional}
+```{block prelim-orderremain, include = params$instructions}
+
 \section*{Order for the Remainder of the Thesis}
 \noindent
-    Remainder of the thesis should be in the following order
+Remainder of the thesis should be in the following order
 
-    \begin{itemize}
-        \item Dedications (if applicable)
-        \item Table of Contents
-        \item List of Figures and Tables
-        \item List of Abbreviations used in the thesis
-        \item Main text of the thesis
-        \item Bibliography or List of References
-        \item Appendices
-    \end{itemize}
+\begin{itemize}
+  \item Dedications (if applicable)
+  \item Table of Contents
+  \item List of Figures and Tables
+  \item List of Abbreviations used in the thesis
+  \item Main text of the thesis
+  \item Bibliography or List of References
+  \item Appendices
+\end{itemize}
 
 \noindent
 \textbf{Date of thesis template release:} 22 March 2019
-\end{instructional}
+```
+
 \clearpage
 
 <!-- *** Dedication *** -->

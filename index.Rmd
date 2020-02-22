@@ -1,12 +1,15 @@
 ---
-title: 'Thesis title'
-degreetype: 'Doctor of Philosophy'
-author: 'Joe Bloggs'
-degrees: 'B.Sc. (Hons), University of Tangambalanga'
+title: "Title here: Subtitle"
+degreetype: "Doctor of Philosophy"
+author: "Candidate's full name"
+degrees: "Candidate’s academic degrees"
 output: bookdown::pdf_book
 site: bookdown::bookdown_site
 link-citations: yes
 knit: "bookdown::render_book"
+params:
+  instructions: TRUE  #Includes instructions for Preliminary pages in output.  
+                      #Change to FALSE to prevent them from appearing in the final document.
 ---
 
 <!-- 
