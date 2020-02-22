@@ -1,7 +1,7 @@
 Unofficial UQ PhD Thesis Template for R Markdown
 ================================================
 
-This repository provides a template for a University of Queensland PhD thesis using Rmarkdown with the bookdown package. It is designed for PhD or Masters students.  The template is derived from ![Rob Hyndman's Monash Thesis Github repository](https://github.com/robjhyndman/MonashThesis) and also the The University of Queensland Official Latex Template ![Latex/ Overleaf](https://my.uq.edu.au/node/1707/4#4) provided by the UQ Graduate School. 
+This repository provides a template for a University of Queensland PhD thesis using Rmarkdown with the bookdown package. It is designed for PhD or Masters students.  The template is derived from Rob Hyndman's Monash Thesis Github repository (https://github.com/robjhyndman/MonashThesis) and also the The University of Queensland Official Latex Template (https://my.uq.edu.au/node/1707/4#4) provided by the UQ Graduate School. 
 
 ## Requirements
 
