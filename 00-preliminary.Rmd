@@ -9,7 +9,7 @@ knit: "bookdown::render_book"
 
 <!-- To ensure your work is not suppressed with the instructions please add your text only where instructed. -->
 
-<!-- We use the Latex \section*{} here rather than RMarkdown ## to ensure that each heading doesn't appear in the Table of Contents -->
+<!-- We use the Latex \section*{} here rather than R Markdown ## to ensure that each heading doesn't appear in the Table of Contents -->
 
 <!-- *** Publications included in this thesis *** -->
 \section*{Publications included in this thesis}
@@ -58,11 +58,11 @@ If you have not included any of your publications in the thesis then state ``No 
 \end{enumerate}
 ```
 
- <!-- ********* Enter your text below this line: ******** -->
+<!-- ********* Enter your text below this line: ******** -->
 
 
- <!-- *************************************************** -->
 
+<!-- *************************************************** -->
 
 <!-- *** Submitted manuscripts included in this thesis *** -->
 \section*{Submitted manuscripts included in this thesis}
@@ -81,11 +81,11 @@ If you have no submitted manuscripts from your candidature then state ``No manus
   
 \end{enumerate}
 ```
- <!-- ********* Enter your text below this line: ******** -->
+<!-- ********* Enter your text below this line: ******** -->
 
 
- <!-- *************************************************** -->
 
+<!-- *************************************************** -->
 
 <!-- *** Other publications during candidature *** -->
 \section*{Other publications during candidature}
@@ -115,11 +115,11 @@ If you have no publications from your candidature then state ``No other publicat
 \end{enumerate}
 ```
 
- <!-- ********* Enter your text below this line: ******** -->
+<!-- ********* Enter your text below this line: ******** -->
 
 
- <!-- *************************************************** -->
 
+<!-- *************************************************** -->
 
 <!-- *** Contributions by others to the thesis *** -->
 \section*{Contributions by others to the thesis}
@@ -132,10 +132,11 @@ List the significant and substantial inputs made by others to the research, work
 If no one contributed significantly then state ``No contributions by others''.
 ```
 
- <!-- ********* Enter your text below this line: ******** -->
+<!-- ********* Enter your text below this line: ******** -->
 
 
- <!-- *************************************************** -->
+
+<!-- *************************************************** -->
 
 <!-- *** Statement of parts of the thesis submitted to qualify for the award of another degree *** -->
 \section*{Statement of parts of the thesis submitted to qualify for the award of another degree}
@@ -154,6 +155,7 @@ If no parts of the thesis have been submitted in this way then state ``No works 
 <!-- ********* Enter your text below this line: ******** -->
 
 
+
 <!-- *************************************************** -->
 
 <!-- *** Research involving human or animal subjects *** -->
@@ -168,6 +170,7 @@ If no human or animal subjects were involved in this research please state: ``No
 ```
 
 <!-- ********* Enter your text below this line: ******** -->
+
 
 
 <!-- *************************************************** -->
@@ -186,6 +189,7 @@ Acknowledgements recognise those who have been instrumental in the completion of
 ```
 
 <!-- ********* Enter your text below this line: ******** -->
+
 
 
 <!-- *************************************************** -->
@@ -214,6 +218,7 @@ If no financial provided then state ``No financial support was provided to fund 
 <!-- ********* Enter your text below this line: ******** -->
 
 
+
 <!-- *************************************************** -->
 
 
@@ -226,6 +231,7 @@ If no financial provided then state ``No financial support was provided to fund 
 ```
 
 <!-- ********* Enter your text below this line: ******** -->
+
 
 
 <!-- *************************************************** -->
@@ -252,6 +258,7 @@ ANZSRC code: 060101, Analytical Biochemistry, 60\% \newline
 <!-- ********* Enter your text below this line: ******** -->
 
 
+
 <!-- *************************************************** -->
 
 <!-- *** Fields of Research (FoR) Classification *** -->
@@ -271,6 +278,7 @@ FoR code: 0601, Biochemistry and Cell Biology, 80\% \newline
 ```
 
 <!-- ********* Enter your text below this line: ******** -->
+
 
 
 <!-- *************************************************** -->
@@ -309,7 +317,6 @@ Remainder of the thesis should be in the following order
 		This template is dedicated to nerds everywhere.
 	\end{center}
 \end{vplace}
-
 <!-- ... to here. -->
 
 \clearpage
@@ -323,11 +330,9 @@ Remainder of the thesis should be in the following order
 	\clearpage
 \listoftables
 
-<!-- List of symbols. REMOVE IF NOT NEEDED. -->
-``` {r, abbrviations-symbols, child = "00-symbols.Rmd"}
+<!-- List of symbols. Included if params: symbols is set to TRUE in Index.RMD -->
+``` {r, abbrviations-symbols, child = "00-symbols.Rmd", include = params$symbols}
 ```
-<!-- \input{./PreliminaryAndBackPages/Symbols.tex}  -->
-
 
 <!-- ***End of front matter *** -->
 

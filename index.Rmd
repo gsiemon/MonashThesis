@@ -1,25 +1,70 @@
 ---
-title: "Title here: Subtitle"
-degreetype: "Doctor of Philosophy"
-author: "Candidate's full name"
-degrees: "Candidate’s academic degrees"
+#-------------------------------------------------------------------------------
+# Unofficial UQ Thesis Template for R Markdown
+#-------------------------------------------------------------------------------
+# This is an unofficial port of The University of Queensland Graduate School 
+# Official LaTeX Thesis template to R Markdown. This template uses material from 
+# a Monash Universitytemplate written by Rob Hyndman.
+# See https://github.com/robjhyndman/MonashThesis for details.
+#
+# The actual thesis content is in several Rmd files that are compiled into a 
+# single document using the r packages: knitr, bookdown and tinytex.
+#
+# Edit the _bookdown.yml file to set the order in which you'd like the Rmd files  
+# to appear. Changing the order of the files starting in 00- is not recommended.
+#
+# If you have specific LaTeX packages to add, put them in the LaTexPackages.tex 
+# file.
+#
+# You will need to ensure you have installed the bookdown packages for R. You 
+# will also need LaTeX installed on your computer. Refer to the Readme.md file
+# for details.
+#
+# Edit the below metadata as necessary. information is used to generate the 
+# title page.
+#-------------------------------------------------------------------------------
+
+#---------------------------- Required for Title Page --------------------------
+#title: Use Sentence Case (capitalise only the first word and proper nouns).
+title: "Title here: Subtitle" 
+
+#author: Do not include initials or middle names. Do not include your 
+#supervisor(s)' name(s).
+author: "Candidate's full name" 
+
+#degree-type: Valid Options are "Doctor" or "Masters".  Correct text is inserted
+#automatically
+degree_type: "Doctor" 
+
+#current-degrees: Use abbreviations. Do not include the date or location of your 
+#                 degree. Do not include the degree for which this thesis is 
+#                 being submitted.
+current_degrees: "Candidate’s academic degrees" 
+
+#school_name: Use Title Case (capitalise every word which is not a conjunction
+#             or preposition).
+#             See - http://blog.apastyle.org/apastyle/2012/03/title-case-and-sentence-case-capitalization-in-apa-style.html - for help.
+school_name: "Name of the Enrolling Unit"
+
+#orcid_url: Add the hyperlink prefix for your ORCID eg https://orcid.org/
+orcid_url: "add your ORCID url here" 
+
+# Add your ORCID
+orcid_id: "Candidate's ORCID"
+
+#submission_year: Year of submission
+submission_year: "Year"
+#-------------------------------------------------------------------------------
+params:
+  instructions: TRUE  #Include instructions for Preliminary pages in output. 
+                      #See 00-preliminary.Rmd & 00-abstract.Rmd 
+                      #Change to FALSE to prevent instructions from appearing in 
+                      #the final document.
+  symbols: TRUE       #Include a list of symbols and abbreviations in the final
+                      #document
+#-------------------------------------------------------------------------------
 output: bookdown::pdf_book
 site: bookdown::bookdown_site
 link-citations: yes
 knit: "bookdown::render_book"
-params:
-  instructions: TRUE  #Includes instructions for Preliminary pages in output.  
-                      #Change to FALSE to prevent them from appearing in the final document.
 ---
-
-<!-- 
-The actual thesis content is in several Rmd files.
-
-You'll need to edit the _bookdown.yml file to set the order in which you'd like them to appear. 
-
-If you have specific LaTeX packages to add, put them in LaTexPackages.tex.
-
-You will need to ensure you have installed the knitr and bookdown packages for R.
-
-You will also need LaTeX installed on your computer.
--->
