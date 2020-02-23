@@ -18,7 +18,7 @@ cat("\\author{", rmarkdown::metadata$author, "}")
 ```
 
 <!-- ***YOUR CURRENT DEGREES*** -->
-```{r, current_degrees, results = "asis", echo = FALSE}
+```{r, current-degrees, results = "asis", echo = FALSE}
 cat("\\currentdegrees{", rmarkdown::metadata$current_degrees, "}")
 ```
 <!-- ***ORCID ID*** -->
@@ -42,7 +42,8 @@ cat("\\school{", rmarkdown::metadata$school_name, "}")
 ```
 
 <!--The code below is a bit of a hack. If left as naked LaTex, knitr/pandoc incorrectly --> 
-<!-- converts the \ in \begin{document} to textbackslash and the document fails to compile. -->
+<!-- converts the \ in \begin{document} to \textbackslash begin\{document\} and the 
+<!-- document fails to compile. -->
 <!-- It is unclear why this is the case as all of the other commands work here correctly. -->
 <!-- This issue with Pandoc may be the reason though: https://github.com/jgm/pandoc/issues/2493 -->
 <!-- Pandoc, which compiles knitted R markdown to latex and then to pdf expects to see -->
