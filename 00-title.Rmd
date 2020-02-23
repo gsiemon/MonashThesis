@@ -41,8 +41,13 @@ cat("\\submittedfor{", rmarkdown::metadata$degree_type, "}")
 cat("\\school{", rmarkdown::metadata$school_name, "}")
 ```
 
-<!--The code below is a bit of a hack. If left as naked LaTex, R Markdown interprets the \ as textbackslash and the document fails to compile. -->
-<!--Its unclear why this is the case as all of the other commands work here correctly. -->
+<!--The code below is a bit of a hack. If left as naked LaTex, knitr/pandoc incorrectly --> 
+<!-- converts the \ in \begin{document} to textbackslash and the document fails to compile. -->
+<!-- It is unclear why this is the case as all of the other commands work here correctly. -->
+<!-- This issue with Pandoc may be the reason though: https://github.com/jgm/pandoc/issues/2493 -->
+<!-- Pandoc, which compiles knitted R markdown to latex and then to pdf expects to see -->
+<!-- an \end{document} here.  But rhat exists in uqthesis.tex.  I can't put the \begin{document} -->
+<!-- in there and also build the title page in an R Markdown document as far as I know. -->
 ```{r, echo = FALSE}
 knitr::raw_latex("\\begin{document}")
 ```
