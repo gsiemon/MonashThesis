@@ -40,6 +40,14 @@ By default, citations are numbered and are included in the bibliography in citat
 
 To compile the thesis into a .pdf file, open index.Rmd in RStudio and click the Knit button.
 
+## Rules for use of Official UQ Logo
+
+The shield and the words 'The University of Queensland' and 'Australia' in the supplied configuration and colours comprise the UQ logo. None of these elements should be moved, amended or recoloured. The logo should only be resized in proportion – do not squash or stretch it.
+ 
+The logo must stand alone in a clear area, free of any other material. (Use a measure equal to half the width of the shield in the logo to determine the minimum area that must be left clear around the entire logo.)
+ 
+The University of Queensland logo is not to be used for any purpose other than the title page in this thesis template. The logo is not to be used to advertise, or to imply the University's endorsement of, an external company, product or service.
+
 ## Useful R Markdown references
 
 The following references are a useful starting point for learning R Markdown:
