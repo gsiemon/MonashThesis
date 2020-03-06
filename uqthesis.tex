@@ -23,9 +23,30 @@
 \input{LaTexPackages.tex}
 \addbibresource{./references/bibliography.bib}
 
-%R Markdown files are inserted here.
-%\begin{document} is inserted by 00-title.Rmd when it is compiled.  The title page has to be included otherwise the document will fail to compile.
+% ********************************************************************
+% DO NOT EDIT: Variables below come from YAML metadata in Index.Rmd.
+% ********************************************************************
+\title{$title$}
 
-$body$
+\author{$author$}
+
+\currentdegrees{$current_degrees$}
+
+\orcid{\href{$orcid_url$}{$orcid_id$}}
+
+\date{$submission_year$}
+
+\submittedfor{$degree_type$}
+
+\school{$school_name$}
+% ********************************************************************
+
+% Begin the document
+\begin{document}
+
+  \frontmatter
+
+  % R Markdown files are inserted here.
+  $body$
 
 \end{document}
