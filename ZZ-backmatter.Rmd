@@ -19,9 +19,10 @@
 
  
 \end{center}
+
 \begin{flushright}
 
-  Author of quote, \newline
+  Author of quote,\\
   Source of quote
 
   \end{flushright}

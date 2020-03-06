@@ -25,19 +25,19 @@ knit: "bookdown::render_book"
 Start this section on a new page [this template will automatically handle this]. \newline
 	
 \noindent
-If you choose to include publications as part of your thesis as described in UQ policy (\href{http://ppl.app.uq.edu.au/content/4.60.07-alternate-thesis-format-options}{\color{blue}{PPL 4.60.07 Alternative Thesis Format Options}}) use this section to detail accepted or in press publication/s using the standard citation format for your discipline. \newline
+If you choose to include publications as part of your thesis as described in UQ policy ([PPL 4.60.07 Alternative Thesis Format Options](http://ppl.app.uq.edu.au/content/4.60.07-alternate-thesis-format-options)) use this section to detail accepted or in press publication/s using the standard citation format for your discipline. \newline
     
 \noindent
-Papers submitted for publication and awaiting review should appear in the next section, \textbf{Submitted manuscripts included in this thesis}. \newline
+Papers submitted for publication and awaiting review should appear in the next section, **Submitted manuscripts included in this thesis**. \newline
     
 \noindent
-On the page immediately preceding the chapter that includes your publication, in no more than one (1) page, describe your contribution to the authorship if you are not a sole author. In describing your contribution, you must satisfy the University's authorship policy (\href{http://ppl.app.uq.edu.au/content/4.20.04-authorship}{\color{blue}{PPL 4.20.04 Authorship}}). Authorship is based on having made a substantive contribution to at least one, and usually more than one, of the following activities:
+On the page immediately preceding the chapter that includes your publication, in no more than one (1) page, describe your contribution to the authorship if you are not a sole author. In describing your contribution, you must satisfy the University's authorship policy ([PPL 4.20.04 Authorship](http://ppl.app.uq.edu.au/content/4.20.04-authorship)). Authorship is based on having made a substantive contribution to at least one, and usually more than one, of the following activities:
 
-\begin{enumerate}
-	\item	conception and design of the project;
-	\item	analysis and interpretation of the research data on which the publication is based;
-	\item	drafting significant parts of the publication or critically reviewing it so as to contribute to the interpretation.
-\end{enumerate}
+1. conception and design of the project;
+
+2. analysis and interpretation of the research data on which the publication is based;
+
+3. drafting significant parts of the publication or critically reviewing it so as to contribute to the interpretation.
 	
 \noindent
 As an author, you must have participated sufficiently in the publication to take public responsibility for at least that part of the work that you contributed. \newline
@@ -48,14 +48,11 @@ It may be useful to refer to specific parts of the methods, analyses, results, o
 \noindent
 If you have not included any of your publications in the thesis then state ``No publications included''. \newline
 	
-\textbf{Example:}
-\begin{enumerate}
+**Example:**
 
-  \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, \href{linktoyourpaper}{Title of your paper}, \textit{Journal}, Issue, Number, Year
+1. \cite{DumyCitationKey} **Your Name**, Co-author 1, and Final Author, [Title of your paper](linktoyourpaper), _Journal_, Issue, Number, Year
 
-  \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, \href{linktoyourpaper}{Title of your paper}, \textit{Journal}, Issue, Number, Year
-
-\end{enumerate}
+2. \cite{DumyCitationKey} **Your Name**, Co-author 1, and Final Author, [Title of your paper](linktoyourpaper), _Journal_, Issue, Number, Year
 ```
 
 <!-- ********* Enter your text below this line: ******** -->
@@ -69,17 +66,15 @@ If you have not included any of your publications in the thesis then state ``No 
 
 ```{block prelim-manuscripts, include = params$instructions}
 
-List manuscript/s submitted for publication here. As described above for \textbf{Publications included in the thesis}, on the page immediately preceding the chapter that includes the submitted manuscript, in no more than one (1) page, detail your contribution to the authorship if you are not the sole author. \newline
+List manuscript/s submitted for publication here. As described above for **Publications included in the thesis**, on the page immediately preceding the chapter that includes the submitted manuscript, in no more than one (1) page, detail your contribution to the authorship if you are not the sole author. \newline
     
 \noindent
 If you have no submitted manuscripts from your candidature then state ``No manuscripts submitted for publication''. \newline
     
-\textbf{Example:}
-\begin{enumerate}
+**Example:**
   
-\item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, Title of your paper, submitted to \textit{Journal} on 4th June2018.
-  
-\end{enumerate}
+1. \cite{DumyCitationKey} **Your Name**, Co-author 1, and Final Author, Title of your paper, submitted to _Journal_ on 4th June2018.
+
 ```
 <!-- ********* Enter your text below this line: ******** -->
 
@@ -97,22 +92,19 @@ List other publications arising during your candidature using the standard citat
 \noindent
 If you have no publications from your candidature then state ``No other publications''.\newline
     
-\textbf{Example:}
+**Example:**
 \subsection*{Conference abstracts}
 
-\begin{enumerate}
 
-  \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, Title of your conference paper, \textit{Proceedings of Conference}, other details.
+1. \cite{DumyCitationKey} **Your Name**, Co-author 1, and Final Author, Title of your conference paper, _Proceedings of Conference_, other details.
 
-\end{enumerate}
+
 
 \subsection*{Book chapters}
 
-\begin{enumerate}
 
-  \item \cite{DumyCitationKey} \textbf{Your Name}, Co-author 1, and Final Author, Title of your chapter, Book, editor, \etc{}.
+1. \cite{DumyCitationKey} **Your Name**, Co-author 1, and Final Author, Title of your chapter, Book, editor, \etc{}.
 
-\end{enumerate}
 ```
 
 <!-- ********* Enter your text below this line: ******** -->
@@ -163,7 +155,7 @@ If no parts of the thesis have been submitted in this way then state ``No works 
 
 ```{block prelim-humananimals, include = params$instructions}
 
-All research involving human or animal subjects requires prior ethical review and approval by an independent review committee. At UQ, the relevant committee for research involving human subjects is the \href{http://www.uq.edu.au/research/integrity-compliance/human-ethics}{\color{blue}{Human Ethics Unit}} and the relevant committee for research involving animal subjects is the relevant \href{http://www.uq.edu.au/research/integrity-compliance/animal-welfare}{\color{blue}{Animal Ethics Committee}}.  Please provide details of any ethics approvals obtained including the ethics approval number and name of approving committees.  A copy of the ethics approval letter must be included in the thesis appendix.\newline
+All research involving human or animal subjects requires prior ethical review and approval by an independent review committee. At UQ, the relevant committee for research involving human subjects is the [Human Ethics Unit](http://www.uq.edu.au/research/integrity-compliance/human-ethics) and the relevant committee for research involving animal subjects is the relevant [Animal Ethics Committee](http://www.uq.edu.au/research/integrity-compliance/animal-welfare). Please provide details of any ethics approvals obtained including the ethics approval number and name of approving committees. A copy of the ethics approval letter must be included in the thesis appendix.\newline
     
 \noindent
 If no human or animal subjects were involved in this research please state: ``No animal or human subjects were involved in this research''.
@@ -227,7 +219,7 @@ If no financial provided then state ``No financial support was provided to fund 
 
 ```{block prelim-keywords, include = params$instructions}
 
-	Maximum 10 words; use lower case throughout, separating words/phrases with commas. For example: word, word word, word, word, word word
+Maximum 10 words; use lower case throughout, separating words/phrases with commas. For example: word, word word, word, word, word word
 ```
 
 <!-- ********* Enter your text below this line: ******** -->
@@ -244,10 +236,10 @@ If no financial provided then state ``No financial support was provided to fund 
 Provide data that links your thesis to the disciplines and discipline clusters in the Federal Government’s Excellence in Research for Australia (ERA) initiative.\newline
     
 \noindent
-Please allocate the thesis a \textbf{maximum of 3} \href{http://www.abs.gov.au/Ausstats/abs@.nsf/Latestproducts/6BB427AB9696C225CA2574180004463E?opendocument}{\color{blue}{Australian and New Zealand Standard Research Classifications (ANZSRC) codes}} at the \textbf{6 digit level} and include the descriptor and a percent weighting for each code. Total percent must add to 100.\newline
+Please allocate the thesis a **maximum of 3** [Australian and New Zealand Standard Research Classifications (ANZSRC) codes](http://www.abs.gov.au/Ausstats/abs@.nsf/Latestproducts/6BB427AB9696C225CA2574180004463E?opendocument) at the **6 digit level** and include the descriptor and a percent weighting for each code. Total percent must add to 100.\newline
 
 
-\textbf{Example:}\newline
+**Example:**\newline
 
 
 ANZSRC code: 060101, Analytical Biochemistry, 60\% \newline
@@ -269,9 +261,9 @@ ANZSRC code: 060101, Analytical Biochemistry, 60\% \newline
 Allows for categorisation of the thesis according to the field of research. \newline
 
 \noindent
-Please allocate the thesis a \textbf{maximum of 3\href{http://www.abs.gov.au/Ausstats/abs@.nsf/Latestproducts/6BB427AB9696C225CA2574180004463E?opendocument}{\color{blue}{Fields of Researc(FoR) Codes}} at the \textbf{4 digit level} and include the descriptor and a percent weighting for each code. Total percent must add to 100\newline
+Please allocate the thesis a **maximum of 3** [Fields of Research (FoR) Codes](http://www.abs.gov.au/Ausstats/abs@.nsf/Latestproducts/6BB427AB9696C225CA2574180004463E?opendocument) at the **4 digit level** and include the descriptor and a percent weighting for each code. Total percent must add to 100.\newline
 
-\textbf{Example:}\newline
+**Example:**\newline
 
 FoR code: 0601, Biochemistry and Cell Biology, 80\% \newline
 \indent FoR code: 0699, Other Biological Sciences, 20\%
@@ -301,7 +293,7 @@ Remainder of the thesis should be in the following order
 \end{itemize}
 
 \noindent
-\textbf{Date of thesis template release:} 22 March 2019
+**Date of thesis template release:** 6 March 2020 (Based on UQ LaTeX template released: 22 March 2019)
 ```
 
 \clearpage

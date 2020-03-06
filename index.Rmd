@@ -2,9 +2,9 @@
 #-------------------------------------------------------------------------------
 # Unofficial UQ Thesis Template for R Markdown
 #-------------------------------------------------------------------------------
-# This is an unofficial port of The University of Queensland Graduate School 
-# Official LaTeX Thesis template to R Markdown. This template uses material from 
-# a Monash Universitytemplate written by Rob Hyndman.
+# This is an unofficial R Markdown port of The University of Queensland Graduate 
+# School Official LaTeX Thesis template to R Markdown. This template uses 
+# material from a Monash University template written by Rob Hyndman.
 # See https://github.com/robjhyndman/MonashThesis for details.
 #
 # The actual thesis content is in several Rmd files that are compiled into a 
@@ -16,15 +16,16 @@
 # If you have specific LaTeX packages to add, put them in the LaTexPackages.tex 
 # file.
 #
-# You will need to ensure you have installed the bookdown packages for R. You 
-# will also need LaTeX installed on your computer. Refer to the Readme.md file
-# for details.
+# You will need to ensure you have installed the bookdown package for R and
+# have  LaTeX installed on your computer. Refer to the Readme.md file for
+# details.
 #
-# Edit the below metadata as necessary. information is used to generate the 
-# title page.
 #-------------------------------------------------------------------------------
 
-#---------------------------- Required for Title Page --------------------------
+#-------------------------- Required for Title Page ----------------------------
+# Edit the below items. They will automatically be populated on the thesis
+# title page.
+#-------------------------------------------------------------------------------
 #title: Use Sentence Case (capitalise only the first word and proper nouns).
 title: "Title here: Subtitle" 
 
@@ -54,6 +55,11 @@ orcid_id: "Candidate's ORCID"
 
 #submission_year: Year of submission
 submission_year: "Year"
+
+#------------------------------ Optional Items ---------------------------------
+# The variables below enable or disable optional features.  By default
+# instructions in the preliminary pages and a list of abbreviations & symbols
+# will be inserted. Replace TRUE with FALSE below to disable
 #-------------------------------------------------------------------------------
 params:
   instructions: TRUE  #Include instructions for Preliminary pages in output. 
