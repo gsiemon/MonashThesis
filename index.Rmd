@@ -50,11 +50,12 @@ school_name: "Name of the Enrolling Unit"
 #orcid_url: Add the hyperlink prefix for your ORCID eg https://orcid.org/
 orcid_url: "add your ORCID url here" 
 
-# Add your ORCID
+#Add your ORCID
 orcid_id: "Candidate's ORCID"
 
 #submission_year: Year of submission
 submission_year: "Year"
+#-------------------------------------------------------------------------------
 
 #------------------------------ Optional Items ---------------------------------
 # The variables below enable or disable optional features.  By default
@@ -68,6 +69,30 @@ params:
                       #the final document.
   symbols: TRUE       #Include a list of symbols and abbreviations in the final
                       #document
+#-------------------------------------------------------------------------------
+
+#--------------------------- Bibliography Options ------------------------------
+# Customise bibliography options here.
+# UQ recommends either a numbered referencing style or the APA author date
+# referencing method.  Numbered referencing is configured here as the default.
+
+#-------------------------------------------------------------------------------
+
+# Location and name bibliography file.  You can add additional .bib files between
+# the [ ] below, separating each with a comma.
+bibliography: [./references/bibliography.bib]
+
+# Sets up a numbered referencing style that displays the bibliography in citation
+# order.  To use APA V7 author date referencing, change "numeric-comp" to "apa"  
+# and delete "sorting=none" from biblatexoptions below.
+biblio-style: "numeric-comp, backend=biber, natbib=true"
+
+# Other options for biblatex package.  Edit as required.
+# Note: If you change the style above from numeric-comp to apa, remove the 
+# "sorting=none" in the options list below so that citations are sorted 
+# alphabetically in the bibliography.
+biblatexoptions: [bibencoding=utf8, minnames=1, maxnames=3, maxbibnames=99, terseinits=true, giveninits=true, uniquename=false, uniquelist=false, doi=false, isbn=false, url=true, sortcites=false, sorting=none]
+
 #-------------------------------------------------------------------------------
 output: bookdown::pdf_book
 site: bookdown::bookdown_site

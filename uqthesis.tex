@@ -5,7 +5,7 @@
 %*********************************************
 
 % Be sure to observe the content of comments within the source code, in .tex files these are prefaced with a percentage symbol.
-% In .Rmd files comments are prefaced enclosed by <!--  -->
+% In .Rmd files comments are enclosed by <!--  -->
 % Most important instructions have been CAPITALISED.
 % To uncomment an inactive command (if required) remove the % from in front of the command.
 
@@ -18,10 +18,56 @@
 
 % See README for version.
 
-% You must have the memoir class installed.  This should be installed automatically by tinytex.
+% You must have the memoir class installed.  This should be installed automatically by tinytex
+% when you first knit the thesis.
 
 \input{LaTexPackages.tex}
-\addbibresource{./references/bibliography.bib}
+
+%***********************************************
+% Bibliography Package
+% Default: Numbered references in citation order
+% This code moved from uqthesis.cls to here so
+% that YAML metadata can be used to define
+% bibliography options. Doesn't seem to work if
+% code is in .cls file.
+%***********************************************
+
+%Ref: Pandoc Latex Template (https://github.com/jgm/pandoc-templates/blob/master/default.latex)
+$if(biblatex)$
+\usepackage[$if(biblio-style)$style=$biblio-style$$endif$]{biblatex}
+\ExecuteBibliographyOptions{$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$}
+$for(bibliography)$
+\addbibresource{$bibliography$}
+$endfor$
+$endif$
+
+%Ref: Rob Hyndman, Monash University
+\DeclareFieldFormat{url}{\url{#1}}
+\DeclareFieldFormat[article]{pages}{#1}
+\DeclareFieldFormat[inproceedings]{pages}{\lowercase{pp.}#1}
+\DeclareFieldFormat[incollection]{pages}{\lowercase{pp.}#1}
+\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}
+\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+\DeclareFieldFormat[article]{title}{\MakeCapital{#1}}
+\DeclareFieldFormat[article]{url}{}
+%\DeclareFieldFormat[book]{url}{}
+%\DeclareFieldFormat[inbook]{url}{}
+%\DeclareFieldFormat[incollection]{url}{}
+%\DeclareFieldFormat[inproceedings]{url}{}
+\DeclareFieldFormat[inproceedings]{title}{#1}
+\DeclareFieldFormat{shorthandwidth}{#1}
+%\DeclareFieldFormat{extrayear}{}
+% No dot before number of articles
+\usepackage{xpatch}
+\xpatchbibmacro{volume+number+eid}{\setunit*{\adddot}}{}{}{}
+% Remove In: for an article.
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{%
+  \printtext{\bibstring{in}\intitlepunct}}}
+
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryCitekey{\clearfield{month}}
+\DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace}
 
 % ********************************************************************
 % DO NOT EDIT: Variables below come from YAML metadata in Index.Rmd.

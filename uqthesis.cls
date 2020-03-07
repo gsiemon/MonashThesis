@@ -1,16 +1,18 @@
 %*************************************
 % UQ Thesis Formatting Style Class
+% Modified for use with R Markdown
 %*************************************
 % uqthesis.cls
 
-% This file defines the formatting style for your thesis in accordance with the Thesis Format Requirements (See Section 7 of UQ Procedure 4.60.08 Higher Degree by Research Examination)
-% for Masters and PhD theses.
+% This file defines the formatting style for your thesis in accordance with the
+% Thesis Format Requirements (See Section 7 of UQ Procedure 4.60.08 Higher
+% Degree by Research Examination) for Masters and PhD theses.
 
 %*************************************
 % Class structure: identification part
 %*************************************
 
-\ProvidesClass{uqthesis}[2018/06/26 version 1.01 UQ PhD and Masters thesis style]
+\ProvidesClass{uqthesis}[2020/03/07 version 1.0 UQ PhD and Masters thesis style for R Markdown]
 \NeedsTeXFormat{LaTeX2e}[2016/05/16]
 
 %Load the memoir class.
@@ -30,9 +32,6 @@
 
 \RequirePackage{url}
 %Typeset urls properly.
-
-%\RequirePackage{hyperref}
-%Hyperlink your pdf output.
 
 \RequirePackage{geometry}
 %This allows us to set the margins correctly.
@@ -115,46 +114,10 @@
 \let\SQRT\sqrt
 \renewcommand{\sqrt}[1]{\ensuremath{\SQRT{#1} \;}}
 
-%****************************************
-% Bibliography Package (Ref: Rob Hyndman)
-% Default: Numbered references in citation order
-%****************************************
-% Numbered referencing style that displays the bibliography in citation order.
-\usepackage[style=numeric-comp, backend=biber, natbib=true]{biblatex}
-\ExecuteBibliographyOptions{bibencoding=utf8, minnames=1, maxnames=3, maxbibnames=99, terseinits=true, giveninits=true, uniquename=false, uniquelist=false, doi=false, isbn=false, url=true, sortcites=false, sorting = none}
-
-% Uncomment these if you want to use author year referencing
-%\usepackage[style=apa, backend=biber, natbib=true]{biblatex}
-%\ExecuteBibliographyOptions{bibencoding=utf8, minnames=1, maxnames=3, maxbibnames=99, dashed=false, terseinits=true, giveninits=true, uniquename=false, uniquelist=false, doi=false, isbn=false, url=true, sortcites=false}
-
-\DeclareFieldFormat{url}{\url{#1}}
-\DeclareFieldFormat[article]{pages}{#1}
-\DeclareFieldFormat[inproceedings]{pages}{\lowercase{pp.}#1}
-\DeclareFieldFormat[incollection]{pages}{\lowercase{pp.}#1}
-\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}
-\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
-\DeclareFieldFormat[article]{title}{\MakeCapital{#1}}
-\DeclareFieldFormat[article]{url}{}
-%\DeclareFieldFormat[book]{url}{}
-%\DeclareFieldFormat[inbook]{url}{}
-%\DeclareFieldFormat[incollection]{url}{}
-%\DeclareFieldFormat[inproceedings]{url}{}
-\DeclareFieldFormat[inproceedings]{title}{#1}
-\DeclareFieldFormat{shorthandwidth}{#1}
-%\DeclareFieldFormat{extrayear}{}
-% No dot before number of articles
-\usepackage{xpatch}
-\xpatchbibmacro{volume+number+eid}{\setunit*{\adddot}}{}{}{}
-% Remove In: for an article.
-\renewbibmacro{in:}{%
-  \ifentrytype{article}{}{%
-  \printtext{\bibstring{in}\intitlepunct}}}
-
-\AtEveryBibitem{\clearfield{month}}
-\AtEveryCitekey{\clearfield{month}}
-\DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace}
-
+%*************************************
 %% HYPERLINKS (Ref: Rob Hyndman)
+%*************************************
+
 \RequirePackage{xcolor} % Needed for links
 \definecolor{darkblue}{rgb}{0,0,.6}
 \RequirePackage{url}
@@ -168,9 +131,11 @@
      citecolor=darkblue,
      colorlinks=true}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*****************************************************
 % Extra stuff for Rmarkdown to work (Ref: Rob Hyndman)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This allows coloured syntax highliting of R code within
+% the thesis document.
+%*****************************************************
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{framed}
@@ -214,5 +179,4 @@
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{{#1}}}}
 \newcommand{\NormalTok}[1]{{#1}}
 
-\usepackage{longtable,booktabs}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%*************************************
