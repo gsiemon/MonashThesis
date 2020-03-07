@@ -23,6 +23,53 @@
 
 \input{LaTexPackages.tex}
 
+%**********************************************
+% Code to generate and formate listfiles output
+% Ref: https://tex.stackexchange.com/questions/265726/embed-nicely-formatted-listfiles-into-document
+%**********************************************
+\listfiles % initialize
+
+\ExplSyntaxOn
+\NewDocumentCommand{\printfilelist}{}
+ {\setlength{\LTleft}{0pt}
+  \pagestyle{empty}
+  \footnotesize
+  \begin{longtable}{@{} >{\ttfamily}l >{\raggedright}p{.6\textwidth} @{}}
+  \nobbz_print_filelist:
+  \end{longtable}
+ }
+
+\tl_new:N \l_nobbz_filelist_body_tl
+
+\cs_new_protected:Npn \nobbz_print_filelist:
+ {
+  \clist_map_inline:cn { @filelist }
+   {
+    \nobbz_print_fileinfo:n { ##1 }
+   }
+  \tl_use:N \l_nobbz_filelist_body_tl
+ }
+
+\cs_new_protected:Npn \nobbz_print_fileinfo:n #1
+ {
+  \regex_match:nnT { \.(sty|cls)\Z } { #1 }
+   {
+    \nobbz_print_pkginfo:n { #1 }
+   }
+ }
+
+\cs_new_protected:Npn \nobbz_print_pkginfo:n #1
+ {
+  \tl_put_right:Nx \l_nobbz_filelist_body_tl
+   {
+    \exp_not:n { #1 }
+    &
+    \exp_not:v { ver@#1 }
+    \exp_not:N \tabularnewline
+   }
+ }
+\ExplSyntaxOff
+
 %***********************************************
 % Bibliography Package
 % Default: Numbered references in citation order

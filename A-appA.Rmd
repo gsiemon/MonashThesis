@@ -13,3 +13,24 @@ Write your appendix here. Following are two examples
 ## Name of Appendix-2
 
 Note that line 5 must appear before your **first** appendix. But other appendices can just start like any other chapter.
+
+
+```{block colophon, include = params$instructions, echo = TRUE}
+# Colophon
+
+## R Session Information
+This template was built with:
+```
+
+```{r session-info, include=params$instructions, echo=TRUE, results='markup'}
+sessioninfo::session_info()
+```
+
+```{block latex-packages, include=params$instructions, echo = TRUE}
+## Latex Packages
+The following Latex packages were used:\newline
+
+\pdftexbanner
+
+\printfilelist
+```
