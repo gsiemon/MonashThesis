@@ -91,7 +91,20 @@ biblio-style: "numeric-comp, backend=biber, natbib=true"
 # Note: If you change the style above from numeric-comp to apa, remove the 
 # "sorting=none" in the options list below so that citations are sorted 
 # alphabetically in the bibliography.
-biblatexoptions: [bibencoding=utf8, minnames=1, maxnames=3, maxbibnames=99, terseinits=true, giveninits=true, uniquename=false, uniquelist=false, doi=false, isbn=false, url=true, sortcites=false, sorting=none]
+biblatexoptions: [bibencoding=utf8, 
+                  #maxnames=3, #If there are more than maxnames names a reference
+                  #minnames=1, #  then truncate them to minnames.
+                  #maxbibnames=99, #Sames as maxnames only affecting the bibliography
+                  #terseinits=true, #Initials don't use . or <space>
+                  #giveninits=true, #Initials not given names are used
+                  #uniquename=false, #Don't try to make names unambiguous
+                  #uniquelist=false, #Don't try to make shortened lists unambiguous
+                  #doi=false, #Don't print the DOI field
+                  #isbn=false, #Don't print the ISBN field
+                  #url=true, #Print URLs if they exist
+                  #sortcites=false] #Respect the order of citations in text ie don't sort
+                  sorting=none] #Don't sort bibliography when using number style
+                                # Delete when using apa style.
 
 #-------------------------------------------------------------------------------
 output: bookdown::pdf_book

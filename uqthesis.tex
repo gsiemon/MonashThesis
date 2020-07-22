@@ -89,32 +89,36 @@ $endfor$
 $endif$
 
 %Ref: Rob Hyndman, Monash University
-\DeclareFieldFormat{url}{\url{#1}}
-\DeclareFieldFormat[article]{pages}{#1}
-\DeclareFieldFormat[inproceedings]{pages}{\lowercase{pp.}#1}
-\DeclareFieldFormat[incollection]{pages}{\lowercase{pp.}#1}
-\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}
-\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
-\DeclareFieldFormat[article]{title}{\MakeCapital{#1}}
-\DeclareFieldFormat[article]{url}{}
-%\DeclareFieldFormat[book]{url}{}
-%\DeclareFieldFormat[inbook]{url}{}
-%\DeclareFieldFormat[incollection]{url}{}
-%\DeclareFieldFormat[inproceedings]{url}{}
-\DeclareFieldFormat[inproceedings]{title}{#1}
-\DeclareFieldFormat{shorthandwidth}{#1}
-%\DeclareFieldFormat{extrayear}{}
-% No dot before number of articles
-\usepackage{xpatch}
-\xpatchbibmacro{volume+number+eid}{\setunit*{\adddot}}{}{}{}
-% Remove In: for an article.
-\renewbibmacro{in:}{%
-  \ifentrytype{article}{}{%
-  \printtext{\bibstring{in}\intitlepunct}}}
-
-\AtEveryBibitem{\clearfield{month}}
-\AtEveryCitekey{\clearfield{month}}
-\DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace}
+%Overrides chosen Biblatex style (Is this Required? OK?)
+%%\DeclareFieldFormat{url}{\url{#1}}
+%%\DeclareFieldFormat[article]{pages}{#1}
+%%\DeclareFieldFormat[inproceedings]{pages}{\lowercase{pp.}#1}
+%%\DeclareFieldFormat[incollection]{pages}{\lowercase{pp.}#1}
+%%\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}}
+%%\DeclareFieldFormat[article]{number}{\mkbibparens{#1}}
+%%\DeclareFieldFormat[article]{title}{\MakeCapital{#1}}
+%%\DeclareFieldFormat[article]{url}{}
+%%%\DeclareFieldFormat[book]{url}{}
+%%%\DeclareFieldFormat[inbook]{url}{}
+%%%\DeclareFieldFormat[incollection]{url}{}
+%%%\DeclareFieldFormat[inproceedings]{url}{}
+%%\DeclareFieldFormat[inproceedings]{title}{#1}
+%%\DeclareFieldFormat{shorthandwidth}{#1}
+%%%\DeclareFieldFormat{extrayear}{}
+%%
+%%% No dot before number of articles
+%%\usepackage{xpatch}
+%%\xpatchbibmacro{volume+number+eid}{\setunit*{\adddot}}{}{}{}
+%%
+%%% Remove In: for an article.
+%%\renewbibmacro{in:}{%
+%%  \ifentrytype{article}{}{%
+%%  \printtext{\bibstring{in}\intitlepunct}}}
+%%
+%%%Get rid of months in citations
+%%\AtEveryBibitem{\clearfield{month}}
+%%\AtEveryCitekey{\clearfield{month}}
+%%\DeclareDelimFormat[cbx@textcite]{nameyeardelim}{\addspace}
 
 % ********************************************************************
 % DO NOT EDIT: Variables below come from YAML metadata in Index.Rmd.
